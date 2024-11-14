@@ -24,10 +24,6 @@ jobs:
     - name: Generate Prisma Client
       run: npx prisma generate
       
-    - name: Set Docker image tag
-        id: set_tag
-        run: echo "::set-output name=tag::${GITHUB_REF#refs/tags/}"
-
     - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.3.0
         with:
@@ -38,17 +34,17 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:${{ steps.set_tag.outputs.tag }} .
+        docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA .
 
     - name: Push to Google Container Registry
       run: |
         gcloud --quiet auth configure-docker
-        docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:${{ steps.set_tag.outputs.tag }}
+        docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA
 
     - name: Deploy to Cloud Run
       run: |
         gcloud run deploy stunby-staging \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:${{ steps.set_tag.outputs.tag }} \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA \
           --region ${{ secrets.GCP_REGION }} \
           --platform managed \
           --allow-unauthenticated \
