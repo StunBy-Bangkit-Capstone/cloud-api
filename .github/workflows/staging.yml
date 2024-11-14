@@ -28,11 +28,16 @@ jobs:
       env:
         GCS_CREDENTIAL_PATH: gs://stunby-bucket/credential.json
       run: |
-        gcloud auth activate-service-account --key-file=/dev/null
-        gcloud --quiet config set project ${{ secrets.GCP_PROJECT_ID }}
+        # Autentikasi awal dengan akun default (asumsikan runner sudah memiliki akses)
+        gcloud auth login --quiet
 
+        # Konfigurasikan project
+        gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+
+        # Unduh file kredensial dari GCS
         gsutil cp $GCS_CREDENTIAL_PATH ./gcp-key.json
 
+        # Gunakan file yang diunduh untuk autentikasi ulang
         gcloud auth activate-service-account --key-file=gcp-key.json
 
     - name: Build Docker image
