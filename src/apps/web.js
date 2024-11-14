@@ -7,7 +7,7 @@ const cookieParser = require("cookie-parser");
 const rateLimiter = require("express-rate-limit");
 const {errorMiddleware} = require('../middlewares/error.middlewares.js')
 const {logMiddleware} = require('../middlewares/logging.middlewares.js')
-
+const { publicRouter } = require('../routes/public.route.js');
 
 const web = express();
 const server = http.createServer(web);
@@ -40,6 +40,7 @@ web.use(cookieParser());
 web.use(errorMiddleware);
 
 
+web.use(publicRouter)
 web.use(logMiddleware);
 web.use(errorMiddleware);
 

@@ -1,0 +1,45 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Generate Prisma Client
+      run: npx prisma generate
+
+    - name: Build Docker image
+      run: |
+        docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA .
+
+    - name: Push to Google Container Registry
+      run: |
+        echo ${{ secrets.GCP_SA_KEY }} | gcloud auth activate-service-account --key-file=-
+        gcloud --quiet config set project ${{ secrets.GCP_PROJECT_ID }}
+        gcloud --quiet auth configure-docker
+        docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA
+
+    - name: Deploy to Cloud Run
+      run: |
+        gcloud run deploy stunby-staging \
+          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA \
+          --region ${{ secrets.GCP_REGION }} \
+          --platform managed \
+          --allow-unauthenticated \
+          --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }}

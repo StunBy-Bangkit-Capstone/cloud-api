@@ -6,8 +6,28 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+
 }
 
 model User {
   id String @id @default(uuid())
+  email String
+  full_name String
+  gender String
+  birth_day String
+  password String
+  token Token[]
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
 }
+
+model Token {
+  id String @id @default(uuid())
+  user_id  String
+  token String @db.Text
+  user  User?  @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
