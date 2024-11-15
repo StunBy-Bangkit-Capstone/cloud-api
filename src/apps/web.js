@@ -22,6 +22,7 @@ const limiter = rateLimiter({
       message: "Too many requests, please try again later.",
     });
   },
+  keyGenerator: (req) => req.ip,
   standardHeaders: "draft-7",
   legacyHeaders: false,
 });
@@ -38,7 +39,7 @@ web.use(express.json());
 web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
 web.use(errorMiddleware);
-
+web.set('trust proxy', true)
 
 web.use(publicRouter)
 web.use(logMiddleware);
