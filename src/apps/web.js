@@ -5,14 +5,22 @@ const cors = require("cors");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const rateLimiter = require("express-rate-limit");
-const {errorMiddleware} = require('../middlewares/error.middlewares.js')
-const {logMiddleware} = require('../middlewares/logging.middlewares.js')
-const { publicRouter } = require('../routes/public.route.js');
+const { errorMiddleware } = require("../middlewares/error.middlewares.js");
+const { logMiddleware } = require("../middlewares/logging.middlewares.js");
+const { publicRouter } = require("../routes/public.route.js");
 
 const web = express();
 const server = http.createServer(web);
 
 // rate limiter
+
+web.set("trust proxy", true);
+
+const customKeyGenerator = (req) => {
+  const ip =
+    req.ip || req.headers["x-forwarded-for"]?.split(",")[0].trim() || "unknown";
+  return ip.replace(/:\d+[^:]*$/, "");
+};
 
 const limiter = rateLimiter({
   windowMs: 60 * 1000, // 1 minutes
@@ -25,24 +33,28 @@ const limiter = rateLimiter({
   keyGenerator: (req) => req.ip,
   standardHeaders: "draft-7",
   legacyHeaders: false,
+  validate: {
+    xForwardedForHeader: false, 
+    ip: false, 
+    trustProxy: false, 
+  },
 });
 
 const corsOptions = {
-    credentials: true,
-    origin: '*',
+  credentials: true,
+  origin: "*",
 };
 
 web.use(express.static(path.join(__dirname, "../../public")));
-web.use(cors(corsOptions))
+web.use(cors(corsOptions));
 web.use(limiter);
 web.use(express.json());
 web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
 web.use(errorMiddleware);
-web.set('trust proxy', true)
 
-web.use(publicRouter)
+web.use(publicRouter);
 web.use(logMiddleware);
 web.use(errorMiddleware);
 
-module.exports= {server}
+module.exports = { server };
