@@ -13,7 +13,7 @@ async function errorMiddleware(err, req, res, next) {
             message: err.message,
         };
 
-        if (err.errors) {
+    if (err.errors) {
             body.errors = err.errors;
         }
 

@@ -11,11 +11,12 @@ datasource db {
 
 model User {
   id String @id @default(uuid())
-  email String
-  full_name String
-  gender String
-  birth_day String
+  email String @unique
+  full_name String ?
+  gender String ?
+  birth_day String ?
   password String
+  foto_url String ?
   token Token[]
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
