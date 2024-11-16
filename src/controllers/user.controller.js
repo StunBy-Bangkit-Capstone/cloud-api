@@ -38,9 +38,8 @@ async function login(req, res, next) {
 
 async function data_user(req, res, next) {
   try {
-    const { id } = req.user;
 
-    const result = await userService.dataUser(id);
+    const result = await userService.dataUser(req);
 
     res.status(200).json({
       resUserData: {
@@ -56,10 +55,9 @@ async function data_user(req, res, next) {
 
 async function update_user(req, res, next) {
   try {
-    const { id } = req.user;
 
     const validated = validate(validation.editProfileSchema, req.body);
-    const result = await userService.editUser(id, validated);
+    const result = await userService.editUser(req, validated);
 
     res.status(200).json({
       resUpdateData: {

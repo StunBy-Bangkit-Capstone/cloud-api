@@ -51,6 +51,19 @@ resource "google_compute_firewall" "allow_http_https" {
   source_ranges = ["0.0.0.0/0"]
 }
 
+resource "google_compute_firewall" "allow_8080" {
+  name    = "allow-8080"
+  network = google_compute_network.custom_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["8080"]
+  }
+
+  source_ranges = ["0.0.0.0/0"] # Allow traffic from all IPs
+  target_tags   = ["http-server"] # Target specific VMs
+}
+
 # Allow internal traffic within the network
 resource "google_compute_firewall" "allow_internal" {
   name    = "allow-internal"
@@ -91,7 +104,7 @@ resource "google_compute_instance" "vm_instance" {
   machine_type = "e2-micro"
   zone         = var.zone
 
-  tags = ["allow-ssh"]
+  tags = ["allow-ssh", "http-server"]
 
   # Boot disk configuration
   boot_disk {
