@@ -1,6 +1,110 @@
 {
-  message: 'Invalid email or password',
-  errors: undefined,
+  message: 'TypeError: data.birth_day.toISOString is not a function\n' +
+    '    at Object.registerUser (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\src\\services\\user.service.js:23:33)\n' +
+    '    at async register (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\src\\controllers\\user.controller.js:8:24)',
   level: 'error',
-  timestamp: '16-11-2024 20:35:45'
+  timestamp: '16-11-2024 23:17:44'
+}
+{
+  message: 'PrismaClientKnownRequestError: \n' +
+    'Invalid `prisma.token.create()` invocation in\n' +
+    'C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\src\\services\\user.service.js:46:22\n' +
+    '\n' +
+    '  43 \n' +
+    '  44 const token = generateToken(user.id);\n' +
+    '  45 \n' +
+    '→ 46 await prisma.token.create(\n' +
+    'Null constraint violation on the fields: (`user_id`)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:7315)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.loginUser (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\src\\services\\user.service.js:46:3)\n' +
+    '    at async login (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\src\\controllers\\user.controller.js:28:24)',
+  level: 'error',
+  timestamp: '16-11-2024 23:25:02'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:19:59'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:20:18'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:23:17'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:24:07'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:24:43'
+}
+{
+  message: 'SyntaxError: Expected double-quoted property name in JSON at position 52\n' +
+    '    at JSON.parse (<anonymous>)\n' +
+    '    at parse (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\types\\json.js:89:19)\n' +
+    '    at C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\body-parser\\lib\\read.js:121:18\n' +
+    '    at invokeCallback (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:224:16)\n' +
+    '    at done (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:213:7)\n' +
+    '    at IncomingMessage.onEnd (C:\\Users\\USER\\Documents\\NGODING\\HOWLIL\\stunby-capstone-bangkit\\node_modules\\raw-body\\index.js:273:7)\n' +
+    '    at IncomingMessage.emit (node:events:519:28)\n' +
+    '    at endReadableNT (node:internal/streams/readable:1696:12)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)',
+  level: 'error',
+  timestamp: '17-11-2024 03:25:52'
 }

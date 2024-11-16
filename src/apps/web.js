@@ -7,10 +7,10 @@ const cookieParser = require("cookie-parser");
 const { errorMiddleware } = require("../middlewares/error.middlewares.js");
 const { logMiddleware } = require("../middlewares/logging.middlewares.js");
 const { publicRouter } = require("../routes/public.route.js");
+const {apiRoute} = require('../routes/private.route.js')
 
 const web = express();
 const server = http.createServer(web);
-
 
 const corsOptions = {
   credentials: true,
@@ -27,5 +27,6 @@ web.use(cookieParser());
 web.use(publicRouter);
 web.use(logMiddleware);
 web.use(errorMiddleware);
+web.use(apiRoute)
 
 module.exports = { server };

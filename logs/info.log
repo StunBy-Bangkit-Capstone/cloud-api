@@ -1,201 +1,72 @@
 {
-  message: 'App start - development',
+  message: 'App start - development || production',
   level: 'info',
-  timestamp: '16-11-2024 07:44:21'
+  timestamp: '17-11-2024 03:26:08'
 }
 {
-  message: 'App start - development',
+  message: 'App start - development || production',
   level: 'info',
-  timestamp: '16-11-2024 07:44:23'
+  timestamp: '17-11-2024 03:29:29'
 }
 {
-  message: 'App start - development',
+  message: 'App start - development || production',
   level: 'info',
-  timestamp: '16-11-2024 07:56:06'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:23'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:24'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:36'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:39'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:42'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:43'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:45'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:56:56'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:57:00'
-}
-{
-  message: 'App start - development',
-  level: 'info',
-  timestamp: '16-11-2024 07:57:06'
-}
-{
-  message: 'App start - development || ',
-  level: 'info',
-  timestamp: '16-11-2024 08:11:18'
-}
-{
-  message: 'App start - development || produdction',
-  level: 'info',
-  timestamp: '16-11-2024 08:11:23'
-}
-{
-  message: 'App start - development || produdction',
-  level: 'info',
-  timestamp: '16-11-2024 08:12:19'
+  timestamp: '17-11-2024 03:29:30'
 }
 {
   message: 'Request received',
-  method: 'GET',
-  url: '/favicon.ico',
+  method: 'PATCH',
+  url: '/api/v2/me',
   params: {},
   query: {},
-  body: {},
+  body: { foto_url: 'https://chubby-receptor.org/' },
   level: 'info',
-  timestamp: '16-11-2024 19:48:18'
+  timestamp: '17-11-2024 03:30:30'
 }
 {
-  message: 'Invalid email or password',
-  errors: undefined,
-  level: 'error',
-  timestamp: '16-11-2024 20:35:45'
+  message: '91157e44-df87-4492-8a88-8e63a7c5fd56',
+  level: 'info',
+  timestamp: '17-11-2024 03:30:30'
 }
 {
-  message: 'App start - development || produdction',
+  message: 'User 91157e44-df87-4492-8a88-8e63a7c5fd56 authenticated successfully',
   level: 'info',
-  timestamp: '16-11-2024 20:39:10'
-}
-{
-  message: 'App start - development || produdction',
-  level: 'info',
-  timestamp: '16-11-2024 20:39:32'
-}
-{
-  message: 'App start - development || ',
-  level: 'info',
-  timestamp: '16-11-2024 20:39:37'
-}
-{
-  message: 'App start - development || produdction',
-  level: 'info',
-  timestamp: '16-11-2024 20:39:44'
-}
-{
-  message: 'App start - development || produdtion',
-  level: 'info',
-  timestamp: '16-11-2024 20:39:47'
+  timestamp: '17-11-2024 03:30:31'
 }
 {
   message: 'App start - development || production',
   level: 'info',
-  timestamp: '16-11-2024 20:39:49'
+  timestamp: '17-11-2024 03:30:50'
+}
+{
+  message: 'Request received',
+  method: 'PATCH',
+  url: '/api/v2/me',
+  params: {},
+  query: {},
+  body: { foto_url: 'https://chubby-receptor.org/' },
+  level: 'info',
+  timestamp: '17-11-2024 03:30:53'
+}
+{
+  message: '91157e44-df87-4492-8a88-8e63a7c5fd56',
+  level: 'info',
+  timestamp: '17-11-2024 03:30:53'
+}
+{
+  message: 'User 91157e44-df87-4492-8a88-8e63a7c5fd56 authenticated successfully',
+  level: 'info',
+  timestamp: '17-11-2024 03:30:53'
+}
+{
+  message: 'Response sent',
+  request: { method: 'PATCH', url: '/api/v2/me' },
+  status: 200,
+  level: 'info',
+  timestamp: '17-11-2024 03:30:53'
 }
 {
   message: 'App start - development || production',
   level: 'info',
-  timestamp: '16-11-2024 20:40:12'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:40:33'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:40:58'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:02'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:17'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:20'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:22'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:26'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:32'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:38'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:41:41'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:43:16'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 20:43:18'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 21:38:02'
-}
-{
-  message: 'App start - development || production',
-  level: 'info',
-  timestamp: '16-11-2024 22:31:50'
+  timestamp: '17-11-2024 03:31:29'
 }
