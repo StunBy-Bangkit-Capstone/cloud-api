@@ -27,9 +27,9 @@ web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
 
 
-web.use(publicRouter);
 web.use(logMiddleware);
-web.use(errorMiddleware);
+web.use(publicRouter);
 web.use(apiRoute)
+web.use(errorMiddleware);
 
 module.exports = { server };
