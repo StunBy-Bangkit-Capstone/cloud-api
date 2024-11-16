@@ -12,11 +12,11 @@ const logger = createLogger({
             level: "debug",
         }),
         new transports.File({
-            filename: "./logs/api/info.log",
+            filename: "./logs/info.log",
             level: "info",
         }),
         new transports.File({
-            filename: "./logs/api/error.log",
+            filename: "./logs/error.log",
             level: "error",
         }),
     ],
