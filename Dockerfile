@@ -14,4 +14,4 @@ RUN npx prisma generate
 
 EXPOSE 8080
 
-CMD ["npm", "start" , "--host", "0.0.0.0", "--port", "8080"]
+CMD ["npm", "start"]

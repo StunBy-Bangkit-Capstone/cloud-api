@@ -4,7 +4,6 @@ const http = require("http");
 const cors = require("cors");
 const path = require("path");
 const cookieParser = require("cookie-parser");
-const rateLimiter = require("express-rate-limit");
 const { errorMiddleware } = require("../middlewares/error.middlewares.js");
 const { logMiddleware } = require("../middlewares/logging.middlewares.js");
 const { publicRouter } = require("../routes/public.route.js");
@@ -12,33 +11,6 @@ const { publicRouter } = require("../routes/public.route.js");
 const web = express();
 const server = http.createServer(web);
 
-// rate limiter
-
-web.set("trust proxy", true);
-
-const customKeyGenerator = (req) => {
-  const ip =
-    req.ip || req.headers["x-forwarded-for"]?.split(",")[0].trim() || "unknown";
-  return ip.replace(/:\d+[^:]*$/, "");
-};
-
-const limiter = rateLimiter({
-  windowMs: 60 * 1000, // 1 minutes
-  max: 120, // limit each IP to 120 requests per windowMs
-  handler: (req, res, next) => {
-    res.status(429).json({
-      message: "Too many requests, please try again later.",
-    });
-  },
-  keyGenerator: customKeyGenerator,
-  standardHeaders: "draft-7",
-  legacyHeaders: false,
-  validate: {
-    xForwardedForHeader: false, 
-    ip: false, 
-    trustProxy: false, 
-  },
-});
 
 const corsOptions = {
   credentials: true,
@@ -47,7 +19,6 @@ const corsOptions = {
 
 web.use(express.static(path.join(__dirname, "../../public")));
 web.use(cors(corsOptions));
-web.use(limiter);
 web.use(express.json());
 web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
