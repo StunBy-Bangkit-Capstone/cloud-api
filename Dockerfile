@@ -10,6 +10,8 @@ RUN npm install prisma --save-dev
 
 COPY . .
 
+ENV PORT=8080
+
 RUN npx prisma generate
 
 EXPOSE 8080

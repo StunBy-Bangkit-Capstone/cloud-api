@@ -1,0 +1,6 @@
+{
+  message: 'Invalid email or password',
+  errors: undefined,
+  level: 'error',
+  timestamp: '16-11-2024 20:35:45'
+}

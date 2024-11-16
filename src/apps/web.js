@@ -22,7 +22,7 @@ web.use(cors(corsOptions));
 web.use(express.json());
 web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
-web.use(errorMiddleware);
+
 
 web.use(publicRouter);
 web.use(logMiddleware);

@@ -9,6 +9,7 @@ async function register (req, res,next) {
 
         res.status(201).json({
             res_regis : {
+                error : false,
                 message : 'Created account succes',
                 data_regis : result
             }
@@ -28,6 +29,7 @@ async function login(req,res,next) {
 
         res.status(200).json({
             res_login : {
+                error : false,
                 message : 'Login Success',
                 dataLogin: result
             }

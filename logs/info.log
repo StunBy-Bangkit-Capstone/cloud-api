@@ -78,3 +78,114 @@
   level: 'info',
   timestamp: '16-11-2024 08:12:19'
 }
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/favicon.ico',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '16-11-2024 19:48:18'
+}
+{
+  message: 'Invalid email or password',
+  errors: undefined,
+  level: 'error',
+  timestamp: '16-11-2024 20:35:45'
+}
+{
+  message: 'App start - development || produdction',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:10'
+}
+{
+  message: 'App start - development || produdction',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:32'
+}
+{
+  message: 'App start - development || ',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:37'
+}
+{
+  message: 'App start - development || produdction',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:44'
+}
+{
+  message: 'App start - development || produdtion',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:47'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:39:49'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:40:12'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:40:33'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:40:58'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:02'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:17'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:20'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:22'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:26'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:32'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:38'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:41:41'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:43:16'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 20:43:18'
+}
