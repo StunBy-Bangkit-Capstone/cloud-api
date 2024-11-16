@@ -1797,3 +1797,8 @@
   level: 'error',
   timestamp: '16-11-2024 02:17:14'
 }
+{
+  message: 'App start - development',
+  level: 'info',
+  timestamp: '16-11-2024 07:07:59'
+}

@@ -30,7 +30,7 @@ const limiter = rateLimiter({
       message: "Too many requests, please try again later.",
     });
   },
-  keyGenerator: (req) => req.ip,
+  keyGenerator: customKeyGenerator,
   standardHeaders: "draft-7",
   legacyHeaders: false,
   validate: {
