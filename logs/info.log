@@ -189,3 +189,13 @@
   level: 'info',
   timestamp: '16-11-2024 20:43:18'
 }
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 21:38:02'
+}
+{
+  message: 'App start - development || production',
+  level: 'info',
+  timestamp: '16-11-2024 22:31:50'
+}
