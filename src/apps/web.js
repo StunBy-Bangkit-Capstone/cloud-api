@@ -17,6 +17,9 @@ const corsOptions = {
   origin: "*",
 };
 
+const DATABASE_URL = process.env.DATABASE_URL
+const SECRET_KEY = process.env.SECRET_KEY
+
 web.use(express.static(path.join(__dirname, "../../public")));
 web.use(cors(corsOptions));
 web.use(express.json());
