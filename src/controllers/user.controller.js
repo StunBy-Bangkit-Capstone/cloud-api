@@ -73,4 +73,4 @@ async function update_user(req, res, next) {
   }
 }
 
-module.exports = { register, login, data_user,update_user };
+module.exports = { register, login, data_user, update_user };
