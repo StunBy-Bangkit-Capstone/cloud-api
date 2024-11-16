@@ -48,4 +48,6 @@ jobs:
           --region ${{ secrets.GCP_REGION }} \
           --platform managed \
           --allow-unauthenticated \
+          --memory 1Gi\
+          --cpu 2\
           --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }}

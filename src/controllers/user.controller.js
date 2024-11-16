@@ -8,8 +8,10 @@ async function register (req, res,next) {
         const result = await userService.registerUser(validated);
 
         res.status(201).json({
-            message : 'Created account succes',
-            dataRegis : result
+            res_regis : {
+                message : 'Created account succes',
+                data_regis : result
+            }
         })
 
     } catch (error) {
@@ -20,12 +22,15 @@ async function register (req, res,next) {
 
 async function login(req,res,next) {
     try {
+        
         const validated = validate(validation.loginSchema, req.body); 
         const result = await userService.loginUser(validated)
 
         res.status(200).json({
-            message : 'Login Success',
-            dataLogin: result
+            res_login : {
+                message : 'Login Success',
+                dataLogin: result
+            }
         })
 
     } catch (error) {
