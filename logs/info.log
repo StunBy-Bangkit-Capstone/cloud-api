@@ -402,3 +402,376 @@
   level: 'info',
   timestamp: '17-11-2024 09:24:40'
 }
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Kailyn29@gmail.com', password: 'cZ63YsV2T9qB7hC' },
+  level: 'info',
+  timestamp: '17-11-2024 09:47:47'
+}
+{
+  message: 'Data is invalid',
+  errors: {
+    password: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.'
+  },
+  level: 'error',
+  timestamp: '17-11-2024 09:47:47'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 400,
+  errors: { password: '***MASKED***' },
+  level: 'info',
+  timestamp: '17-11-2024 09:47:47'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'noppal.901@gmail.com', password: '12345678' },
+  level: 'info',
+  timestamp: '17-11-2024 09:48:22'
+}
+{
+  message: 'Data is invalid',
+  errors: {
+    password: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.'
+  },
+  level: 'error',
+  timestamp: '17-11-2024 09:48:22'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 400,
+  errors: { password: '***MASKED***' },
+  level: 'info',
+  timestamp: '17-11-2024 09:48:22'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:04:46'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:04:47'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4Njg3LCJleHAiOjE3MzE5MzUwODd9.1tylGoRMLe4LPxB4H4cFnmzOmrICdpT_jL-n3gtt1uh6kjUMbW36M0MfFi90jBxWH3PJmzjr2JlNujFLZ925xg',
+  level: 'info',
+  timestamp: '17-11-2024 20:04:47'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:05:10'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:10'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4NzEwLCJleHAiOjE3MzE5MzUxMTB9.g9x0K9FfZWz1j7jlXE2Dn_lJYHwdfszr-PbeE2U6t7iXNGiH_mEqOKi_m4yH71HBlYAlA84R0SyzQHfP8EImAg',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:10'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:05:22'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:22'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4NzIyLCJleHAiOjE3MzE5MzUxMjJ9.FjSQGWG_FdoFl3FjYa5bkoMbVx_t1z31kkMJVCC8ACPBQKVIwGqpKQnELYC0DsXKdO3NMKaxOVMa7cOwNp6j_w',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:22'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:05:29'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:29'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4NzI5LCJleHAiOjE3MzE5MzUxMjl9.ojFt23WfwJp_8Ak7jDYI3sHO5k2dynGLJPKhjXomeXRXS9VNjC0k3OVONlM8n6jS_uPnWMrQXQ37U7WfOTe3oA',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:29'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:05:40'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:40'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4NzQwLCJleHAiOjE3MzE5MzUxNDB9.Kd6dMQwGHl8OmO0KBz_t9QIv4Oumy4Vryq7vtugGAX4nJ4bs6SdLgrqJ5YQYqj2_m4TATROWtGJDmYI3uCfpTA',
+  level: 'info',
+  timestamp: '17-11-2024 20:05:40'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/me',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '17-11-2024 20:06:01'
+}
+{
+  message: 'Invalid token claims',
+  level: 'warn',
+  timestamp: '17-11-2024 20:06:01'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/api/v1/me' },
+  status: 401,
+  level: 'info',
+  timestamp: '17-11-2024 20:06:01'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:06:31'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:06:31'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4NzkxLCJleHAiOjE3MzE5MzUxOTF9.XfVtqsf9Wd77L-VBKwmTENUJnKPu0srdBg5IaX2rcuZxFyeI4umYGyT-zVK-33NGjtZb9h0n5ND0Hn8gzMB0_A',
+  level: 'info',
+  timestamp: '17-11-2024 20:06:31'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:06:57'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:06:57'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4ODE3LCJleHAiOjE3MzE5MzUyMTd9._IkkJhzecIhtu_Y0jXSa_ZUlzllWvZpTk_cuF1Lzx-IIcy3QMWYv_HHe4wxWzE3M0kFaYru83fVMWU7bevxj1g',
+  level: 'info',
+  timestamp: '17-11-2024 20:06:57'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:07:05'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:07:05'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4ODI1LCJleHAiOjE3MzE5MzUyMjV9.S3w64x5SK_nIF2yPrQ9hSzzdrRH0fJ17Y8ci8rY7ugwvW8WPKaX6bE4h05QFA_ZjvBybJJpYXdeI8PHay8Br7Q',
+  level: 'info',
+  timestamp: '17-11-2024 20:07:05'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:07:19'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:07:19'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4ODM5LCJleHAiOjE3MzE5MzUyMzl9.2FCngiwox1IXhXwrZfXUofA-TU9V0XsYCFyXCylXZiyWX34JIzuQWvyp6VU6n7y5zLVHTjm0aWsHdJI-zm6KnQ',
+  level: 'info',
+  timestamp: '17-11-2024 20:07:19'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/me',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '17-11-2024 20:07:49'
+}
+{
+  message: 'Invalid token claims',
+  level: 'warn',
+  timestamp: '17-11-2024 20:07:49'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/api/v1/me' },
+  status: 401,
+  level: 'info',
+  timestamp: '17-11-2024 20:07:49'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: { email: 'Luther.Leuschke@gmail.com', password: '@Test123' },
+  level: 'info',
+  timestamp: '17-11-2024 20:09:04'
+}
+{
+  message: 'User logged in with email: Luther.Leuschke@gmail.com',
+  level: 'info',
+  timestamp: '17-11-2024 20:09:05'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiODRjNjUxODItMGM2ZC00N2M4LWIzZTctMDY0ZWQ3MGViM2MzIiwiaWF0IjoxNzMxODQ4OTQ0LCJleHAiOjE3MzE5MzUzNDR9.dcQTcYVTkRl_uz7JQIdIhvj966v-3QbZI4a28rCBoU6obfPHSGMoC7zD0rSwwQtSOHqSDsG7_NvKqB48l3XvQA',
+  level: 'info',
+  timestamp: '17-11-2024 20:09:05'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/me',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '17-11-2024 20:09:25'
+}
+{
+  message: 'Invalid token claims',
+  level: 'warn',
+  timestamp: '17-11-2024 20:09:25'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/api/v1/me' },
+  status: 401,
+  level: 'info',
+  timestamp: '17-11-2024 20:09:25'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '17-11-2024 20:11:54'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '17-11-2024 20:11:59'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '17-11-2024 20:12:02'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '17-11-2024 20:12:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '17-11-2024 20:12:22'
+}
