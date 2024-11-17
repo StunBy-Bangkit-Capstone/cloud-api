@@ -8,7 +8,7 @@ const authenticate = async (req, res, next) => {
     const token = req.get("Authorization");
 
     // 2. Periksa apakah token ada dan formatnya valid
-    if (!token || !token.startsWith("Bearer ")) {
+    if (!token || !token.startsWith("Bearer")) {
       logger.info("Authorization header missing or invalid format");
       return res.status(401).json({
         message: "You are unauthorized, please login first",
@@ -34,7 +34,7 @@ const authenticate = async (req, res, next) => {
       });
     }
 
-    logger.info(claims.uuid)
+    logger.info(claims)
 
     if (!claims || !claims.uuid ) {
       logger.info("Invalid token claims");
