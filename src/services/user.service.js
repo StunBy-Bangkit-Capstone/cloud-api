@@ -11,8 +11,9 @@ const registerUser = async (data) => {
     });
 
     if (isUser) {
-      throw new ResponseError(400, "account already created");
+      throw new ResponseError(400, "Account already exists");
     }
+
     const hashedPassword = await encryptPassword(data.password);
 
     const user = await prisma.user.create({
@@ -27,7 +28,8 @@ const registerUser = async (data) => {
 
     return user;
   } catch (error) {
-    throw new ResponseError(500, error, true);
+    console.error("Error during user registration:", error);
+    throw new ResponseError(500, "An unexpected error occurred during registration");
   }
 };
 
@@ -42,7 +44,6 @@ const loginUser = async (data) => {
     }
 
     const isPasswordValid = await checkPassword(data.password, user.password);
-
     if (!isPasswordValid) {
       throw new ResponseError(401, "Invalid email or password");
     }
@@ -58,22 +59,27 @@ const loginUser = async (data) => {
 
     return token;
   } catch (error) {
-    throw new ResponseError(500, error, true);
+    console.error("Error during login:", error);
+    throw new ResponseError(500, "An unexpected error occurred during login");
   }
 };
 
 // edit profile
-
 const editUser = async (req, data) => {
   try {
-    const user = prisma.user.findUnique({
+    const user = await prisma.user.findUnique({
       where: {
         id: req.user.id,
       },
     });
 
     if (!user) {
-      throw new ResponseError(400, "User Not Found", true);
+      throw new ResponseError(404, "User Not Found");
+    }
+
+    // Encrypt password if being updated
+    if (data.password) {
+      data.password = await encryptPassword(data.password);
     }
 
     const updatedUser = await prisma.user.update({
@@ -83,7 +89,8 @@ const editUser = async (req, data) => {
 
     return updatedUser;
   } catch (error) {
-    throw new ResponseError(500, error, true);
+    console.error("Error during profile update:", error);
+    throw new ResponseError(500, "An unexpected error occurred during profile update");
   }
 };
 
@@ -95,7 +102,7 @@ const dataUser = async (req) => {
     });
 
     if (!user) {
-      throw new ResponseError(400, "User not found", true);
+      throw new ResponseError(404, "User not found");
     }
 
     return {
@@ -107,7 +114,8 @@ const dataUser = async (req) => {
       foto_url: user.foto_url,
     };
   } catch (error) {
-    throw new ResponseError(500, error, true);
+    console.error("Error retrieving user data:", error);
+    throw new ResponseError(500, "An unexpected error occurred while retrieving user data");
   }
 };
 

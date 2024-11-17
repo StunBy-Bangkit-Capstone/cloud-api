@@ -1,74 +1,80 @@
 const { logger } = require("../apps/logging.js");
 
-function maskingLog(obj) {
-  const sensitiveKeys = ["password", "confirm_password", "new_password", "current_password", "token"];
-
-  const maskSensitive = (key, value) => (sensitiveKeys.includes(key) ? "******" : value);
-
-  const recursiveMask = (data) => {
-      if (typeof data === "object" && data !== null) {
-          for (const key in data) {
-              if (data.hasOwnProperty(key)) {
-                  data[key] = typeof data[key] === "object" ? recursiveMask(data[key]) : maskSensitive(key, data[key]);
-              }
-          }
-      }
-      return data;
-  };
-
-  return recursiveMask({ ...obj });
-}
-
 const logMiddleware = (req, res, next) => {
   const { body, params, query, method, originalUrl } = req;
 
-   logger.info({
-        message: "Request received",
-        method,
-        url: originalUrl,
-        params: maskingLog(params),
-        query: maskingLog(query),
-        body: maskingLog(body),
-    });
+  logger.info({
+    message: "Request received",
+    method,
+    url: originalUrl,
+    params,
+    query,
+    body,
+  });
 
-      // Save the original response.send function
-      const originalSend = res.send;
+  const originalSend = res.send;
 
-      // Override the response.send function to intercept the response body and log it
-      res.send = function (body) {
-          // Log the response data
-          const { data, errors } = JSON.parse(body);
-  
-          const obj = {
-              message: "Response sent",
-              request: {
-                  method: method,
-                  url: originalUrl,
-              },
-              status: res.statusCode,
-          };
-  
-          if (data) {
-              if (Array.isArray(data)) {
-                  temp = [];
-                  for (const item of data) {
-                      temp.push(maskingLog(item));
-                  }
-                  obj.data = temp;
-              } else {
-                  obj.data = maskingLog(data);
-              }
-          } else if (errors) {
-              obj.errors = maskingLog(errors);
-          }
-  
-          logger.info(obj);
-  
-          // Call the original response.send function
-          originalSend.call(this, body);
+  res.send = function (body) {
+    const contentType = res.get("Content-Type");
+
+    if (contentType && contentType.includes("application/json")) {
+      let responseData;
+      try {
+        responseData = JSON.parse(body);
+      } catch (e) {
+        logger.error({
+          message: "Failed to parse response body",
+          error: e.message,
+          body,
+        });
+        return originalSend.call(this, body);
+      }
+
+      const { data, errors } = responseData;
+
+      const obj = {
+        message: "Response sent",
+        request: {
+          method: method,
+          url: originalUrl,
+        },
+        status: res.statusCode,
       };
-  
-      next();
+
+      if (data) {
+        if (Array.isArray(data)) {
+          let temp = [];
+          for (const item of data) {
+            temp.push(maskingLog(item));
+          }
+          obj.data = temp;
+        } else {
+          obj.data = maskingLog(data);
+        }
+      } else if (errors) {
+        obj.errors = maskingLog(errors);
+      } else {
+        obj.message = "Response has no data or errors";
+      }
+
+      logger.info(obj);
+    }
+
+    return originalSend.call(this, body);
+  };
+
+  next();
 };
 
-module.exports= {logMiddleware}
+const maskingLog = (data) => {
+
+  if (typeof data === "object" && data !== null) {
+    const maskedData = { ...data };
+    if (maskedData.password) maskedData.password = "***MASKED***";
+    if (maskedData.ssn) maskedData.ssn = "***MASKED***";
+    return maskedData;
+  }
+  return data;
+};
+
+module.exports = { logMiddleware };

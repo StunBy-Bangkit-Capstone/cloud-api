@@ -10,44 +10,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Generate Prisma Client
-      run: npx prisma generate
-    
-    - name: Set up Google Cloud SDK
-      uses: google-github-actions/setup-gcloud@v0.3.0
-      with:
-        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
-        export_default_credentials: true
-        project_id: ${{ secrets.GCP_PROJECT_ID }}
+      - name: Generate Prisma Client
+        run: npx prisma generate
 
-    - name: Build Docker image
-      run: |
-        docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA .
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0.3.0
+        with:
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-    - name: Push to Google Container Registry
-      run: |
-        gcloud --quiet auth configure-docker
-        docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA
+      - name: Build Docker image
+        run: |
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA .
 
-    - name: Deploy to Cloud Run
-      run: |
-        gcloud run deploy stunby-staging \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA \
-          --region ${{ secrets.GCP_REGION }} \
-          --platform managed \
-          --allow-unauthenticated \
-          --memory 1Gi\
-          --cpu 2\
-          --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }}
+      - name: Push to Google Container Registry
+        run: |
+          gcloud --quiet auth configure-docker
+          docker push asia.gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA
+
+      - name: Deploy to Cloud Run
+        run: |
+          gcloud run deploy stunby-staging \
+            --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA \
+            --region ${{ secrets.GCP_REGION }} \
+            --platform managed \
+            --allow-unauthenticated \
+            --memory 1Gi\
+            --min-instances=1\
+            --timeout=600\
+            --cpu 2\
+            --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }}

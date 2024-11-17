@@ -1,18 +1,18 @@
 const userService = require("../services/user.service.js");
 const validation = require("../validations/user.validation.js");
 const { validate } = require("../utils/validation.js");
+const { logger } = require("../apps/logging.js");
 
 async function register(req, res, next) {
   try {
     const validated = validate(validation.registerSchema, req.body);
     const result = await userService.registerUser(validated);
 
+    logger.info(`User registered with ID: ${result.id}`);
     res.status(201).json({
-      res_regis: {
-        error: false,
-        message: "Created account succes",
-        data_regis: result,
-      },
+      error: false,
+      message: "Account created successfully",
+      data: result,
     });
   } catch (error) {
     next(error);
@@ -24,51 +24,46 @@ async function login(req, res, next) {
     const validated = validate(validation.loginSchema, req.body);
     const result = await userService.loginUser(validated);
 
+    logger.info(`User logged in with email: ${validated.email}`);
     res.status(200).json({
-      res_login: {
-        error: false,
-        message: "Login Success",
-        dataLogin: result,
-      },
+      error: false,
+      message: "Login successful",
+      data: result,
     });
   } catch (error) {
     next(error);
   }
 }
 
-async function data_user(req, res, next) {
+async function getUserData(req, res, next) {
   try {
-
     const result = await userService.dataUser(req);
 
+    logger.info(`User data retrieved for user ID: ${req.user.id}`);
     res.status(200).json({
-      resUserData: {
-        error: false,
-        message: "succes get data",
-        dataUsers: result,
-      },
+      error: false,
+      message: "Successfully retrieved user data",
+      data: result,
     });
   } catch (error) {
     next(error);
   }
 }
 
-async function update_user(req, res, next) {
+async function updateUser(req, res, next) {
   try {
-
     const validated = validate(validation.editProfileSchema, req.body);
     const result = await userService.editUser(req, validated);
 
+    logger.info(`User data updated for user ID: ${req.user.id}`);
     res.status(200).json({
-      resUpdateData: {
-        error: false,
-        message: "succes update data",
-        dataUserUpdate: result,
-      },
+      error: false,
+      message: "User data updated successfully",
+      data: result,
     });
   } catch (error) {
     next(error);
   }
 }
 
-module.exports = { register, login, data_user, update_user };
+module.exports = { register, login, getUserData, updateUser };

@@ -5,22 +5,16 @@ const { decodeToken } = require("../utils/jsonwebtoken.js");
 const authenticate = async (req, res, next) => {
   try {
     // 1. Ambil token dari header Authorization
-    const token = req.get("Authorization");
+    const authHeader = req.get("Authorization");
 
     // 2. Periksa apakah token ada dan formatnya valid
-    if (!token || !token.startsWith("Bearer ")) {
-      logger.info("Authorization header missing or invalid format");
-      return res.status(401).json({
-        message: "You are unauthorized, please login first",
-      });
+    if (!authHeader) {
+      return unauthorizedResponse(res, "Authorization header missing");
     }
 
-    const extractedToken = token.substr(7);
-    if (!extractedToken || extractedToken === "null") {
-      logger.info("No valid token provided");
-      return res.status(401).json({
-        message: "You are unauthorized, please login first",
-      });
+    const [scheme, extractedToken] = authHeader.split(" ");
+    if (scheme !== "Bearer" || !extractedToken || extractedToken === "null") {
+      return unauthorizedResponse(res, "Invalid Authorization format or token missing");
     }
 
     // 3. Decode token
@@ -28,35 +22,26 @@ const authenticate = async (req, res, next) => {
     try {
       claims = decodeToken(extractedToken);
     } catch (error) {
-      logger.info("Invalid or expired token");
-      return res.status(401).json({
-        message: "Invalid or expired token",
-      });
+      logger.warn("Invalid or expired token");
+      return unauthorizedResponse(res, "Invalid or expired token");
     }
 
-    logger.info(claims.uuid)
-
-    if (!claims || !claims.uuid ) {
-      logger.info("Invalid token claims");
-      return res.status(401).json({
-        message: "You are unauthorized, please login first",
-      });
+    if (!claims || !claims.uuid) {
+      return unauthorizedResponse(res, "Invalid token claims");
     }
 
-    // 5. Periksa apakah user ada di database
+    // 4. Periksa apakah user ada di database
     const user = await prisma.user.findUnique({
       where: { id: claims.uuid },
       include: { token: true }, // Sesuaikan jika Anda membutuhkan relasi lain
     });
 
     if (!user) {
-      logger.info(`User with ID ${claims.uuid} not found`);
-      return res.status(401).json({
-        message: "You are unauthorized, please login first",
-      });
+      logger.warn(`User with ID ${claims.uuid} not found`);
+      return unauthorizedResponse(res, "User not found");
     }
 
-    // 6. Periksa token di database (untuk validasi token session)
+    // 5. Periksa token di database (untuk validasi token session)
     const sessionToken = await prisma.token.findFirst({
       where: {
         token: extractedToken,
@@ -65,24 +50,36 @@ const authenticate = async (req, res, next) => {
     });
 
     if (!sessionToken) {
-      logger.info("Session token not found or invalid");
-      return res.status(401).json({
-        message: "Session expired or invalid, please login again",
-      });
+      logger.warn("Session token not found or invalid");
+      return unauthorizedResponse(res, "Session expired or invalid, please login again");
     }
 
-    // 7. Tambahkan user dan session ke request
+    // 6. Tambahkan user dan session ke request
     req.user = user;
     req.sessionToken = sessionToken;
 
     logger.info(`User ${user.id} authenticated successfully`);
     next();
   } catch (error) {
-    logger.error(`Authentication error: ${error.message}`);
+    logger.error(`Authentication error: ${error.message}`, {
+      stack: error.stack,
+      path: req.originalUrl,
+      method: req.method,
+    });
     res.status(500).json({
+      error: true,
       message: "An error occurred during authentication",
     });
   }
 };
+
+// Helper untuk mengirimkan unauthorized response
+function unauthorizedResponse(res, message) {
+  logger.warn(message);
+  return res.status(401).json({
+    error: true,
+    message,
+  });
+}
 
 module.exports = { authenticate };
