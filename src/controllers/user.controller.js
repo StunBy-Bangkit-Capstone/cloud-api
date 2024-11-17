@@ -3,10 +3,13 @@ const validation = require("../validations/user.validation.js");
 const { validate } = require("../utils/validation.js");
 const { logger } = require("../apps/logging.js");
 const prisma = require("../configs/db.js");
+const { encryptPassword, checkPassword } = require("../utils/bcrypt.js");
+const { ResponseError } = require("../errors/response-error.js");
 
 
 async function register(req, res, next) {
   try {
+    const data= req.body
     // const validated = validate(validation.registerSchema, req.body);
     // const result = await userService.registerUser(validated);
     const isUser = await prisma.user.findUnique({
