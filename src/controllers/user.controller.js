@@ -2,41 +2,18 @@ const userService = require("../services/user.service.js");
 const validation = require("../validations/user.validation.js");
 const { validate } = require("../utils/validation.js");
 const { logger } = require("../apps/logging.js");
-const prisma = require("../configs/db.js");
-const { encryptPassword, checkPassword } = require("../utils/bcrypt.js");
-const { ResponseError } = require("../errors/response-error.js");
 
 
 async function register(req, res, next) {
   try {
-    const data= req.body
-    // const validated = validate(validation.registerSchema, req.body);
-    // const result = await userService.registerUser(validated);
-    const isUser = await prisma.user.findUnique({
-      where: { email: data.email },
-    });
+    const validated = validate(validation.registerSchema, req.body);
+    const result = await userService.registerUser(validated);
 
-    if (isUser) {
-      throw new ResponseError(400, "Account already exists");
-    }
-
-    const hashedPassword = await encryptPassword(data.password);
-
-    const user = await prisma.user.create({
-      data: {
-        email: data.email,
-        full_name: data.full_name,
-        gender: data.gender,
-        birth_day: data.birth_day,
-        password: hashedPassword,
-      },
-    });
-
-    logger.info(`User registered with ID: ${user.id}`);
+    logger.info(`User registered with ID: ${result.id}`);
     res.status(201).json({
       error: false,
       message: "Account created successfully",
-      data: user,
+      data: result,
     });
   } catch (error) {
     next(error);

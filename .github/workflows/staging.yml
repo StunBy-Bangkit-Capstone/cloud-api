@@ -34,17 +34,17 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA .
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-app:$GITHUB_SHA .
 
       - name: Push to Google Container Registry
         run: |
           gcloud --quiet auth configure-docker
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-app:$GITHUB_SHA
 
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy stunby-staging \
-            --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-staging:$GITHUB_SHA \
+          gcloud run deploy stunby-app \
+            --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/stunby-app:$GITHUB_SHA \
             --region ${{ secrets.GCP_REGION }} \
             --platform managed \
             --allow-unauthenticated \
