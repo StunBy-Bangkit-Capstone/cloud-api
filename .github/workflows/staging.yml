@@ -50,6 +50,6 @@ jobs:
             --allow-unauthenticated \
             --memory 1Gi\
             --min-instances=1\
-            --timeout=600\
+            --timeout=900\
             --cpu 2\
             --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }}
