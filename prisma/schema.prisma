@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -6,29 +5,95 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
-
 }
 
 model User {
-  id String @id @default(uuid())
-  email String @unique
-  full_name String ?
-  gender String ?
-  birth_day String ?
-  password String
-  foto_url String ?
-  token Token[]
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
+  id           String        @id @default(uuid())
+  email        String        @unique
+  full_name    String?
+  gender       String?
+  birth_day    String?
+  password     String
+  foto_url     String?
+  token        Token[]
+  measurements Measurement[]
+  nutrition    Nutrition[]
+  created_at   DateTime      @default(now())
+  updated_at   DateTime      @updatedAt
+}
 
+model Nutrition {
+  id               String            @id @default(uuid())
+  user_id          String
+  food_name        String
+  date             String
+  portion          Float
+  created_at       DateTime          @default(now())
+  updated_at       DateTime          @updatedAt
+  User             User              @relation(fields: [user_id], references: [id])
+  Nutrition_Result Nutrition_Result? @relation()
+}
+
+model Nutrition_Result {
+  id            String    @id @default(uuid())
+  nutrition_id  String    @unique
+  calciums      Float
+  calories      Float
+  fats          Float
+  carbohydrates Float
+  proteins      Float
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  nutrtion      Nutrition @relation(fields: [nutrition_id], references: [id])
+}
+
+model Measurement {
+  id                    String                @id @default(uuid())
+  user_id               String
+  date_measure          String
+  level_activity        String
+  weight                Float
+  height                Float?
+  status_asi            String
+  baby_photo_url        String
+  measuremenet_response Measurement_Response? @relation()
+  created_at            DateTime              @default(now())
+  updated_at            DateTime              @updatedAt
+  user                  User?                 @relation(fields: [user_id], references: [id])
+}
+
+model Measurement_Response {
+  id                  String        @id @default(uuid())
+  prediction_id       String        @unique
+  calories_needed     Float
+  protein_needed      Float
+  fat_needed          Float
+  carbohydrate_needed Float
+  status_result       STATUS_RESULT
+  measurement         Measurement   @relation(fields: [prediction_id], references: [id])
+}
+
+enum STATUS_RESULT {
+  NORMAL
+  STUNTING
+  OBESITAS
 }
 
 model Token {
-  id String @id @default(uuid())
-  user_id  String
-  token String @db.Text
-  user  User?  @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
+  id         String   @id @default(uuid())
+  user_id    String
+  token      String   @db.Text
+  user       User?    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
 
+model Articles {
+  id              String   @id @default(uuid())
+  title           String
+  constent        String   @db.Text
+  author          String?
+  article_img_url String
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
+}

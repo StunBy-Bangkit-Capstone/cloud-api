@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "seed": "node ./prisma/seeder.js"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
