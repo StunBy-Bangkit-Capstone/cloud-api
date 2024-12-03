@@ -1,5 +1,6 @@
 const { logger } = require("../apps/logging.js");
 const { ResponseError } = require("../errors/response-error.js");
+const multer = require('multer')
 
 function errorMiddleware(err, req, res, next) {
     if (!err) {

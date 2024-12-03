@@ -4,7 +4,7 @@ module.exports = {
   registerSchema: Joi.object({
     email: Joi.string().email().required(),
     full_name: Joi.string().required(),
-    gender: Joi.string().valid("Male", "Female").required(),
+    gender: Joi.string().valid("male", "female").required(),
     birth_day: Joi.string().required(),
     password: Joi.string()
     .min(8)
@@ -29,7 +29,7 @@ module.exports = {
   editProfileSchema: Joi.object({
     email: Joi.string().email().optional(),
     full_name: Joi.string().optional(),
-    gender: Joi.string().valid("Male", "Female").optional(),
+    gender: Joi.string().valid("male", "female").optional(),
     birth_day: Joi.string().optional(),
     password: Joi.string()
     .min(8)
