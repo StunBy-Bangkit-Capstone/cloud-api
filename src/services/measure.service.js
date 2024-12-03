@@ -151,4 +151,60 @@ async function measurementBaby(user_id, data) {
     }
 }
 
-module.exports = { measurementBaby };
+async function getMeasurements({ userId, date }) {
+    const user = await prisma.user.findUnique({
+        where: { id: userId },
+        select: { birth_day: true },
+    });
+
+    if (!user || !user.birth_day) {
+        throw new ResponseError(404, "User atau tanggal lahir tidak ditemukan");
+    }
+
+    const dateFilter = date
+        ? {
+              date_measure: {
+                  gte: user.birth_day, 
+                  lte: date,          
+              },
+          }
+        : {
+              date_measure: {
+                  gte: user.birth_day, 
+              },
+          };
+
+    // Query measurement dengan filter yang sesuai
+    const measurements = await prisma.measurement.findMany({
+        where: {
+            user_id: userId,
+            ...dateFilter,
+        },
+        include: {
+            user: {
+                select: {
+                    id: true,
+                    email: true,
+                    full_name: true,
+                    gender: true,
+                    birth_day: true,
+                    foto_url: true,
+                },
+            },
+            measuremenet_result: true,
+            IMT_Result: true,
+        },
+        orderBy: {
+            date_measure: "desc",
+        },
+    });
+
+    if (!measurements || measurements.length === 0) {
+        throw new ResponseError(404, "Data measurement tidak ditemukan");
+    }
+
+    return measurements;
+}
+
+
+module.exports = { measurementBaby, getMeasurements };

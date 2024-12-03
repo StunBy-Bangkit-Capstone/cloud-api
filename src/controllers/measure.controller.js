@@ -38,4 +38,22 @@ async function postMeasurement(req, res, next) {
     }
 }
 
-module.exports = { postMeasurement };
+async function getMeasurements(req, res, next) {
+    try {
+        const { date } = req.query;
+        const userId = req.user.id;
+
+        const data = await measureService.getMeasurements({ userId, date });
+
+        res.status(200).json({
+            status: "success",
+            message: "data get successfully",
+            data,
+        });
+
+    } catch (err) {
+        next(err)
+    }
+}
+
+module.exports = { postMeasurement,getMeasurements };

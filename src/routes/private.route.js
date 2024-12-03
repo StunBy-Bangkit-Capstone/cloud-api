@@ -12,5 +12,6 @@ apiRoute.get("/api/v1/me", userController.getUserData);
 apiRoute.patch("/api/v2/me", userController.updateUser);
 
 apiRoute.post("/api/v1/measure",uploadImage, measureController.postMeasurement)
+apiRoute.get("/api/v1/measures", measureController.getMeasurements)
 
 module.exports = { apiRoute };
