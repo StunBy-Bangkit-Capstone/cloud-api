@@ -1,3 +1,7 @@
+const { logger } = require("../apps/logging.js");
+const { ResponseError } = require("../errors/response-error.js");
+const multer = require('multer')
+
 function errorMiddleware(err, req, res, next) {
     if (!err) {
         return next();
@@ -25,6 +29,7 @@ function errorMiddleware(err, req, res, next) {
         method: req.method,
     });
 
+    // Send the error message, along with more details if available
     res.status(500).json({
         error: true,
         message: err.message || "Internal Server Error",
