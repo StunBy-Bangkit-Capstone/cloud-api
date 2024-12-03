@@ -30,6 +30,9 @@ async function measurementBaby(user_id, data) {
 
         // 3. Panggil API untuk melakukan pengukuran menggunakan ML
         logger.info('Calling /measure-classify API for ML measure');
+
+        logger.info(`Calling /measure-classify with URL: ${data.baby_photo_url} and data: ${JSON.stringify(data)}`);
+
         const response_ml_measure = await api.post("/measure-classify", {
             url: data.baby_photo_url,
             weight: data.weight,
@@ -43,7 +46,6 @@ async function measurementBaby(user_id, data) {
         }
 
         logger.info('ML measure API response received successfully');
-
         // 4. Panggil API untuk prediksi kebutuhan nutrisi bayi
         logger.info('Calling /predict_nutrition API for nutrition prediction');
         const response_predict_nutrition = await api.post("/predict_nutrition", {
