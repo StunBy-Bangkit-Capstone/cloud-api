@@ -1,7 +1,3 @@
-const { logger } = require("../apps/logging.js");
-const { ResponseError } = require("../errors/response-error.js");
-const multer = require('multer')
-
 function errorMiddleware(err, req, res, next) {
     if (!err) {
         return next();
@@ -9,7 +5,7 @@ function errorMiddleware(err, req, res, next) {
     if (err instanceof multer.MulterError) {
         return res.status(400).json({
             error: true,
-            message: err.message,
+            message: `File upload error: ${err.message}`,
         });
     }
     if (err instanceof ResponseError) {
@@ -17,10 +13,11 @@ function errorMiddleware(err, req, res, next) {
         return res.status(err.status).json({
             error: true,
             message: err.message,
-            errors: err.errors,
+            errors: err.errors || [],
         });
     }
 
+    // Log the error details for further debugging
     logger.error({
         message: err.message || "Unknown error",
         stack: err.stack,
@@ -30,7 +27,8 @@ function errorMiddleware(err, req, res, next) {
 
     res.status(500).json({
         error: true,
-        message: "Internal Server Error",
+        message: err.message || "Internal Server Error",
+        stack: process.env.NODE_ENV === 'development' ? err.stack : undefined, // Show stack trace in dev mode
     });
 }
 
