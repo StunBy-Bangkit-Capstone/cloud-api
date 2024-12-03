@@ -48,29 +48,43 @@ model Nutrition_Result {
 }
 
 model Measurement {
-  id                    String                @id @default(uuid())
-  user_id               String
-  date_measure          String
-  level_activity        String
-  weight                Float
-  height                Float?
-  status_asi            String
-  baby_photo_url        String
-  measuremenet_response Measurement_Response? @relation()
-  created_at            DateTime              @default(now())
-  updated_at            DateTime              @updatedAt
-  user                  User?                 @relation(fields: [user_id], references: [id])
+  id                  String              @id @default(uuid())
+  user_id             String
+  date_measure        String
+  level_activity      String
+  weight              Float
+  status_asi          String
+  baby_photo_url      String
+  created_at          DateTime            @default(now())
+  updated_at          DateTime            @updatedAt
+  user                User?               @relation(fields: [user_id], references: [id])
+  measuremenet_result Measurement_Result? @relation()
+  IMT_Result          IMT_Result?         @relation()
 }
 
-model Measurement_Response {
-  id                  String        @id @default(uuid())
-  prediction_id       String        @unique
+model IMT_Result {
+  id                        String      @id @default(uuid())
+  measure_id                String      @unique
+  baby_length               Float
+  z_score_bb_tb             Float
+  status_imt                String
+  imt                       Float
+  z_score_length            Float
+  z_score_weight            Float
+  nitritional_status_weight String
+  nitritional_status_length String
+  status_bb_tb              String
+  measurement               Measurement @relation(fields: [measure_id], references: [id])
+}
+
+model Measurement_Result {
+  id                  String      @id @default(uuid())
+  measure_id          String      @unique
   calories_needed     Float
   protein_needed      Float
   fat_needed          Float
   carbohydrate_needed Float
-  status_result       STATUS_RESULT
-  measurement         Measurement   @relation(fields: [prediction_id], references: [id])
+  measurement         Measurement @relation(fields: [measure_id], references: [id])
 }
 
 enum STATUS_RESULT {

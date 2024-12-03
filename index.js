@@ -35,6 +35,7 @@ web.use(express.json());
 web.use(express.urlencoded({ extended: true }));
 web.use(cookieParser());
 
+web.use('/images', express.static(path.join(__dirname, 'public/images')));
 web.use(logMiddleware);
 web.use(publicRouter);
 web.use(apiRoute);

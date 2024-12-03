@@ -2,6 +2,7 @@ const express = require("express");
 const publicRouter = express.Router();
 const userController = require('../controllers/user.controller.js')
 
+
 publicRouter.get("/", (req, res) => {
     res.json({ message: "API is ready for you" });
 });
