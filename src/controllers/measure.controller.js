@@ -3,7 +3,7 @@ const validation = require("../validations/measure.validation.js")
 const measureService = require('../services/measure.service.js')
 
 
-async function postMeasurement(req, res) {
+async function postMeasurement(req, res,next) {
     try {
         if (!req.file) {
             return res.status(400).json({ error: true, message: 'Image file is required' });
