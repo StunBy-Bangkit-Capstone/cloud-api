@@ -46,6 +46,7 @@ async function measurementBaby(user_id, data) {
         }
 
         logger.info('ML measure API response received successfully');
+        logger.info(response_ml_measure);
         // 4. Panggil API untuk prediksi kebutuhan nutrisi bayi
         logger.info('Calling /predict_nutrition API for nutrition prediction');
         const response_predict_nutrition = await api.post("/predict_nutrition", {
@@ -61,8 +62,8 @@ async function measurementBaby(user_id, data) {
             logger.error('Nutrition prediction API response is empty or invalid');
             throw new ResponseError(400, 'Nutrition prediction API is not working');
         }
-
         logger.info('Nutrition prediction API response received successfully');
+        logger.info(response_predict_nutrition);
 
         // 5. Simpan data pengukuran baru ke dalam database
         logger.info('Creating new measurement record in database');
@@ -77,7 +78,7 @@ async function measurementBaby(user_id, data) {
             }
         });
 
-        logger.info(`New measurement created with ID: ${new_measurement.id}`);
+        logger.info(`New measurement created with ID: ${new_measurement}`);
 
         // 6. Simpan hasil IMT ke dalam database
         logger.info('Creating new iMT_Result record in database');
@@ -100,13 +101,14 @@ async function measurementBaby(user_id, data) {
 
         // 7. Simpan hasil prediksi nutrisi ke dalam database
         logger.info('Creating new measurement_Result record in database');
+        logger.info(response_predict_nutrition);
         await prisma.measurement_Result.create({
             data: {
                 measure_id: new_measurement.id,
-                calories_needed: response_predict_nutrition.calories_needed,
-                protein_needed: response_predict_nutrition.protein_needed,
-                fat_needed: response_predict_nutrition.fat_needed,
-                carbohydrate_needed: response_predict_nutrition.carbohydrate_needed
+                calories_needed: response_predict_nutrition.data.calories_needed,
+                protein_needed: response_predict_nutrition.data.proteins_needed,
+                fat_needed: response_predict_nutrition.data.fat_needed,
+                carbohydrate_needed: response_predict_nutrition.data.carbohydrate_needed
             }
         });
 
@@ -136,10 +138,10 @@ async function measurementBaby(user_id, data) {
                 status_bb_tb: response_ml_measure.status_bb_tb
             },
             measurement_result: {
-                calories_needed: response_predict_nutrition.calories_needed,
-                protein_needed: response_predict_nutrition.protein_needed,
-                fat_needed: response_predict_nutrition.fat_needed,
-                carbohydrate_needed: response_predict_nutrition.carbohydrate_needed
+                calories_needed: response_predict_nutrition.data.calories_needed,
+                protein_needed: response_predict_nutrition.data.proteins_needed,
+                fat_needed: response_predict_nutrition.data.fat_needed,
+                carbohydrate_needed: response_predict_nutrition.data.carbohydrate_needed
             }
         };
 
