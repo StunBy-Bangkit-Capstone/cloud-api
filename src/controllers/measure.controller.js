@@ -1,4 +1,4 @@
-const validate = require("../utils/validation.js")
+const {validate} = require("../utils/validation.js")
 const validation = require("../validations/measure.validation.js")
 const measureService = require('../services/measure.service.js')
 
@@ -23,7 +23,7 @@ async function postMeasurement(req, res) {
         });
 
     } catch (error) {
-        res.status(error.status || 500).json({ message: error.message, errors: error.errors || {} });
+        next(error)
     }
 }
 

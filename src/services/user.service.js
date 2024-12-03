@@ -66,57 +66,49 @@ const loginUser = async (data) => {
 
 // edit profile
 const editUser = async (req, data) => {
-  try {
-    const user = await prisma.user.findUnique({
-      where: {
-        id: req.user.id,
-      },
-    });
+  const user = await prisma.user.findUnique({
+    where: {
+      id: req.user.id,
+    },
+  });
 
-    if (!user) {
-      throw new ResponseError(404, "User Not Found");
-    }
-
-    // Encrypt password if being updated
-    if (data.password) {
-      data.password = await encryptPassword(data.password);
-    }
-
-    const updatedUser = await prisma.user.update({
-      where: { id: req.user.id },
-      data,
-    });
-
-    return updatedUser;
-  } catch (error) {
-    console.error("Error during profile update:", error);
-    throw new ResponseError(500, "An unexpected error occurred during profile update");
+  if (!user) {
+    throw new ResponseError(404, "User Not Found");
   }
+
+  // Encrypt password if being updated
+  if (data.password) {
+    data.password = await encryptPassword(data.password);
+  }
+
+  const updatedUser = await prisma.user.update({
+    where: { id: req.user.id },
+    data,
+  });
+
+  return updatedUser;
+
 };
 
 // get data user
 const dataUser = async (req) => {
-  try {
-    const user = await prisma.user.findUnique({
-      where: { id: req.user.id },
-    });
+  const user = await prisma.user.findUnique({
+    where: { id: req.user.id },
+  });
 
-    if (!user) {
-      throw new ResponseError(404, "User not found");
-    }
-
-    return {
-      id: user.id,
-      email: user.email,
-      full_name: user.full_name,
-      gender: user.gender,
-      birth_day: user.birth_day,
-      foto_url: user.foto_url,
-    };
-  } catch (error) {
-    console.error("Error retrieving user data:", error);
-    throw new ResponseError(500, "An unexpected error occurred while retrieving user data");
+  if (!user) {
+    throw new ResponseError(404, "User not found");
   }
+
+  return {
+    id: user.id,
+    email: user.email,
+    full_name: user.full_name,
+    gender: user.gender,
+    birth_day: user.birth_day,
+    foto_url: user.foto_url,
+  };
+
 };
 
 module.exports = { loginUser, registerUser, dataUser, editUser };
