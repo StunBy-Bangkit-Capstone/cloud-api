@@ -14,7 +14,7 @@ async function postMeasurement(req, res, next) {
 
         logger.info('Image file received, processing upload');
 
-        const imageUrl = `http://${req.get('host')}/images/${req.file.filename}`;
+        const imageUrl = `https://${req.get('host')}/images/${req.file.filename}`;
         req.body.baby_photo_url = imageUrl;
 
         logger.info('Validating request body');
