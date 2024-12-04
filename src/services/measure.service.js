@@ -33,13 +33,18 @@ async function measurementBaby(user_id, data) {
 
         logger.info(`Calling /measure-classify with URL: ${data.baby_photo_url} and data: ${JSON.stringify(data)}`);
 
-        const response_ml_measure = await api.post("/measure-classify", {
-            url: data.baby_photo_url,
-            weight: data.weight,
-            age: user_age,
-            gender: user.gender
-        });
+        let response_ml_measure
+        try {
+            response_ml_measure = await api.post("/measure-classify", {
+                url: data.baby_photo_url,
+                weight: data.weight,
+                age: user_age,
+                gender: user.gender
+            });
 
+        } catch (error) {
+            throw new ResponseError(500, error)
+        }
         if (!response_ml_measure) {
             logger.error('ML measure API response is empty or invalid');
             throw new ResponseError(400, 'ML measure API is not working');
@@ -49,14 +54,21 @@ async function measurementBaby(user_id, data) {
         logger.info(response_ml_measure);
         // 4. Panggil API untuk prediksi kebutuhan nutrisi bayi
         logger.info('Calling /predict_nutrition API for nutrition prediction');
-        const response_predict_nutrition = await api.post("/predict_nutrition", {
-            usia_bulan: user_age,
-            gender: formatted_gender,
-            berat_kg: data.weight,
-            tinggi_cm: response_ml_measure.baby_length,
-            aktivitas_level: data.level_activity,
-            status_asi: data.status_asi
-        });
+
+        let response_predict_nutrition;
+        try {
+            response_predict_nutrition = await api.post("/predict_nutrition", {
+                usia_bulan: user_age,
+                gender: formatted_gender,
+                berat_kg: data.weight,
+                tinggi_cm: response_ml_measure.baby_length,
+                aktivitas_level: data.level_activity,
+                status_asi: data.status_asi
+            });
+        } catch (error) {
+            throw new ResponseError(500, error)
+
+        }
 
         if (!response_predict_nutrition) {
             logger.error('Nutrition prediction API response is empty or invalid');
@@ -151,7 +163,7 @@ async function measurementBaby(user_id, data) {
     }
 }
 
-async function getMeasurements(userId, data ) {
+async function getMeasurements(userId, data) {
     const user = await prisma.user.findUnique({
         where: { id: userId },
         select: { birth_day: true },
@@ -163,16 +175,16 @@ async function getMeasurements(userId, data ) {
 
     const dateFilter = data.date
         ? {
-              date_measure: {
-                  gte: user.birth_day, 
-                  lte: data.date,          
-              },
-          }
+            date_measure: {
+                gte: user.birth_day,
+                lte: data.date,
+            },
+        }
         : {
-              date_measure: {
-                  gte: user.birth_day, 
-              },
-          };
+            date_measure: {
+                gte: user.birth_day,
+            },
+        };
 
     // Query measurement dengan filter yang sesuai
     const measurements = await prisma.measurement.findMany({
@@ -206,8 +218,8 @@ async function getMeasurements(userId, data ) {
     return measurements;
 }
 
-async function food_nutritions(user_id,data) {
-    
+async function food_nutritions(user_id, data) {
+
 }
 
-module.exports = { measurementBaby, getMeasurements ,food_nutritions};
+module.exports = { measurementBaby, getMeasurements, food_nutritions };
