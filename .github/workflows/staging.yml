@@ -46,4 +46,4 @@ jobs:
             --min-instances=1\
             --timeout=900\
             --cpu 2\
-            --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }}
+            --set-env-vars DATABASE_URL=${{ secrets.STAGING_DATABASE_URL }},SECRET_KEY=${{ secrets.SECRET_KEY }},BASE_API=${{secrets.BASE_API}}
