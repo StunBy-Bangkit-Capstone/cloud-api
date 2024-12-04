@@ -1,0 +1,176 @@
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
+  level: 'info',
+  timestamp: '04-12-2024 07:43:01'
+}
+{
+  message: 'Invalid or expired token',
+  level: 'info',
+  timestamp: '04-12-2024 07:43:01'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:43:01'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
+  level: 'info',
+  timestamp: '04-12-2024 07:43:11'
+}
+{
+  message: 'Invalid or expired token',
+  level: 'info',
+  timestamp: '04-12-2024 07:43:11'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:43:11'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
+  level: 'info',
+  timestamp: '04-12-2024 07:43:20'
+}
+{
+  message: 'Invalid or expired token',
+  level: 'info',
+  timestamp: '04-12-2024 07:43:20'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:43:20'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/images/1733269170898.jpeg',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '04-12-2024 07:59:07'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '04-12-2024 07:59:07'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/images/1733269170898.jpeg' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:59:07'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/favicon.ico',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '04-12-2024 07:59:08'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '04-12-2024 07:59:08'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/favicon.ico' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:59:08'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/images/1733269170898.jpeg',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '04-12-2024 07:59:58'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '04-12-2024 07:59:58'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/images/1733269170898.jpeg' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:59:58'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/favicon.ico',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '04-12-2024 07:59:59'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '04-12-2024 07:59:59'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/favicon.ico' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 07:59:59'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/measure',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '04-12-2024 10:42:17'
+}
+{
+  message: 'Invalid or expired token',
+  level: 'info',
+  timestamp: '04-12-2024 10:42:17'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'POST', url: '/api/v1/measure' },
+  status: 401,
+  level: 'info',
+  timestamp: '04-12-2024 10:42:17'
+}

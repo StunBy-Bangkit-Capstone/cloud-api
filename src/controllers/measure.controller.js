@@ -40,10 +40,9 @@ async function postMeasurement(req, res, next) {
 
 async function getMeasurements(req, res, next) {
     try {
-        const { date } = req.query;
         const userId = req.user.id;
-
-        const data = await measureService.getMeasurements({ userId, date });
+        const validated = await validate(validation.sort_date, req.query)
+        const data = await measureService.getMeasurements(userId, validated);
 
         res.status(200).json({
             status: "success",
@@ -56,4 +55,24 @@ async function getMeasurements(req, res, next) {
     }
 }
 
-module.exports = { postMeasurement,getMeasurements };
+
+async function food_nutrion(req, res, next) {
+    try {
+        const user_id = req.user.id
+
+        const validated = await validate(validation.nutrition_schema, req.body)
+
+        const result = await measureService.food_nutritions(user_id, validated)
+
+        res.status(201).json({
+            succes: "false",
+            message: "Data successfully created",
+            data: result
+        })
+
+    } catch (error) {
+        next(error)
+    }
+}
+
+module.exports = { postMeasurement, getMeasurements, food_nutrion };

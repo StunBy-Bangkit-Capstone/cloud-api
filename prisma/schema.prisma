@@ -37,6 +37,7 @@ model Nutrition {
 model Nutrition_Result {
   id            String    @id @default(uuid())
   nutrition_id  String    @unique
+  notes         String    @db.Text
   calciums      Float
   calories      Float
   fats          Float

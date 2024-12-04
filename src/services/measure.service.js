@@ -151,7 +151,7 @@ async function measurementBaby(user_id, data) {
     }
 }
 
-async function getMeasurements({ userId, date }) {
+async function getMeasurements(userId, data ) {
     const user = await prisma.user.findUnique({
         where: { id: userId },
         select: { birth_day: true },
@@ -161,11 +161,11 @@ async function getMeasurements({ userId, date }) {
         throw new ResponseError(404, "User atau tanggal lahir tidak ditemukan");
     }
 
-    const dateFilter = date
+    const dateFilter = data.date
         ? {
               date_measure: {
                   gte: user.birth_day, 
-                  lte: date,          
+                  lte: data.date,          
               },
           }
         : {
@@ -206,5 +206,8 @@ async function getMeasurements({ userId, date }) {
     return measurements;
 }
 
+async function food_nutritions(user_id,data) {
+    
+}
 
-module.exports = { measurementBaby, getMeasurements };
+module.exports = { measurementBaby, getMeasurements ,food_nutritions};
