@@ -55,6 +55,24 @@ async function getMeasurements(req, res, next) {
     }
 }
 
+async function getDetailMeasurement(req, res, next) {
+    try {
+
+        const validated = await validate(validation.detail_schema, req.params)
+
+        const result = await measureService.getDetailMeasurement(validated)
+
+        return res.status(200).json({
+            error: false,
+            message: "get detail data successfully",
+            data: result
+        });
+
+    } catch (error) {
+        next(error)
+    }
+}
+
 
 async function food_nutrion(req, res, next) {
     try {
@@ -75,4 +93,4 @@ async function food_nutrion(req, res, next) {
     }
 }
 
-module.exports = { postMeasurement, getMeasurements, food_nutrion };
+module.exports = { postMeasurement, getMeasurements, food_nutrion ,getDetailMeasurement};

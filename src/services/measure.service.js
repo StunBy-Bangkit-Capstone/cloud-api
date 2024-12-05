@@ -218,8 +218,29 @@ async function getMeasurements(userId, data) {
     return measurements;
 }
 
+async function getDetailMeasurement(data) {
+    const { measure_id } = data
+
+    const measure_data = await prisma.measurement.findUnique({
+        where: {
+            id: measure_id,
+        },
+        include: {
+            measuremenet_result: true,
+            IMT_Result: true
+        }
+    })
+    if (!measure_data) {
+        throw new ResponseError(400, "Data Not Found")
+    }
+
+
+    return measure_data
+
+}
+
 async function food_nutritions(user_id, data) {
 
 }
 
-module.exports = { measurementBaby, getMeasurements, food_nutritions };
+module.exports = { measurementBaby, getMeasurements, food_nutritions, getDetailMeasurement };

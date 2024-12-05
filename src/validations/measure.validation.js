@@ -19,5 +19,9 @@ module.exports = {
         food_name: Joi.string().required(),
         date: Joi.string().pattern(/^\d{4}-\d{2}-\d{2}$/).required(),
         portion : Joi.number().required()
+    }),
+
+    detail_schema : Joi.object({
+        measure_id : Joi.string().required()
     })
 }
