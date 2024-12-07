@@ -57,7 +57,7 @@ async function measurementBaby(user_id, data) {
 
         let response_predict_nutrition;
         try {
-            response_predict_nutrition = await api.post("/predict_nutrition", {
+            response_predict_nutrition = await api.post("/predict-nutrition", {
                 usia_bulan: user_age,
                 gender: formatted_gender,
                 berat_kg: data.weight,
@@ -239,7 +239,46 @@ async function getDetailMeasurement(data) {
 
 }
 
+// TODO : add makanan
+// TODO : history makanan
+// TODO : register tambahan weight samo length 
+// TODO : ketika register kan udah ada weiht sama length tu bikinin function buat api ini nutrition
+
+
+
 async function food_nutritions(user_id, data) {
+
+    logger.info("start service and searching user")
+    const user = await prisma.user.findUnique({
+        where: {
+            id: user_id
+        }
+    })
+
+    if (!user) {
+        throw new ResponseError(400, "user not found")
+    }
+
+    logger.info("start api food nutrition")
+    let food_nutrition;
+    try {
+        food_nutrition = await api.get("/add-food", {
+            user_id,
+            food_name: data.food_name,
+            date: data.date,
+            postion: data.postion
+
+        })
+    } catch (error) {
+        throw new ResponseError(400, error)
+    }
+
+    logger.info("start upload to db")
+
+    if (food_nutrition) {
+
+    }
+
 
 }
 
