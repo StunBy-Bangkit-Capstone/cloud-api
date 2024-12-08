@@ -248,6 +248,8 @@ async function getDetailMeasurement(data) {
 
 async function food_nutritions(user_id, data) {
 
+    const {food_name,date,portion} = data
+
     logger.info("start service and searching user")
     const user = await prisma.user.findUnique({
         where: {
@@ -262,11 +264,11 @@ async function food_nutritions(user_id, data) {
     logger.info("start api food nutrition")
     let food_nutrition;
     try {
-        food_nutrition = await api.get("/add-food", {
+        food_nutrition = await api.post("/add-food", {
             user_id,
-            food_name: data.food_name,
-            date: data.date,
-            postion: data.postion
+            food_name,
+            date,
+            portion
 
         })
     } catch (error) {
@@ -275,9 +277,34 @@ async function food_nutritions(user_id, data) {
 
     logger.info("start upload to db")
 
-    if (food_nutrition) {
+    const {notes,nutrients} = food_nutrition.data
+    const {calcium,calories,carbohydrate,fat,proteins} = nutrients
 
+    if (food_nutrition) {
+       const nutrition =  await prisma.nutrition.create({
+            data :{
+               user_id,
+               food_name,
+               date,
+               portion 
+            }
+        })
+
+        await prisma.nutrition_Result.create({
+            data:{
+                nutrition_id : nutrition.id,
+                notes ,
+                calciums : calcium,
+                calories,
+                carbohydrates :carbohydrate,
+                fats :fat,
+                proteins 
+
+            }
+        })
     }
+
+    return food_nutrition
 
 
 }

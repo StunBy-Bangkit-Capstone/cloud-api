@@ -4,21 +4,146 @@
   url: '/api/v1/nutrition',
   params: {},
   query: {},
-  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
   level: 'info',
-  timestamp: '04-12-2024 07:43:01'
+  timestamp: '08-12-2024 09:41:19'
 }
 {
-  message: 'Invalid or expired token',
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733625264,
+    exp: 1733711664
+  },
   level: 'info',
-  timestamp: '04-12-2024 07:43:01'
+  timestamp: '08-12-2024 09:41:19'
 }
 {
-  message: 'Response has no data or errors',
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 09:41:20'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 09:41:20'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 09:41:20'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 09:41:20'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "30f5dfb8-d1d4-48fc-a33b-124bae92d744",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fat: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mfats\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mfats\x1B[39m` is missing.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "30f5dfb8-d1d4-48fc-a33b-124bae92d744",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fat: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mfats\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mfats\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 09:41:20',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}
+{
+  message: 'Response sent',
   request: { method: 'POST', url: '/api/v1/nutrition' },
-  status: 401,
+  status: 500,
+  errors: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "30f5dfb8-d1d4-48fc-a33b-124bae92d744",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fat: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mfats\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mfats\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
   level: 'info',
-  timestamp: '04-12-2024 07:43:01'
+  timestamp: '08-12-2024 09:41:21'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:42:06'
 }
 {
   message: 'Request received',
@@ -26,151 +151,149 @@
   url: '/api/v1/nutrition',
   params: {},
   query: {},
-  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
   level: 'info',
-  timestamp: '04-12-2024 07:43:11'
+  timestamp: '08-12-2024 09:42:08'
 }
 {
-  message: 'Invalid or expired token',
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733625264,
+    exp: 1733711664
+  },
   level: 'info',
-  timestamp: '04-12-2024 07:43:11'
+  timestamp: '08-12-2024 09:42:08'
 }
 {
-  message: 'Response has no data or errors',
-  request: { method: 'POST', url: '/api/v1/nutrition' },
-  status: 401,
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
   level: 'info',
-  timestamp: '04-12-2024 07:43:11'
+  timestamp: '08-12-2024 09:42:08'
 }
 {
-  message: 'Request received',
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 09:42:08'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 09:42:08'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 09:42:08'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "1611d8cd-6b57-43cc-8085-65571a6eb01f",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fats: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mcarbohydrates\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mcarbohydrates\x1B[39m` is missing.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "1611d8cd-6b57-43cc-8085-65571a6eb01f",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fats: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mcarbohydrates\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mcarbohydrates\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
   method: 'POST',
-  url: '/api/v1/nutrition',
-  params: {},
-  query: {},
-  body: { food_name: 'Ketoprak', date: '2024-11-27', portion: 1000 },
-  level: 'info',
-  timestamp: '04-12-2024 07:43:20'
+  timestamp: '08-12-2024 09:42:08',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
 }
 {
-  message: 'Invalid or expired token',
-  level: 'info',
-  timestamp: '04-12-2024 07:43:20'
-}
-{
-  message: 'Response has no data or errors',
+  message: 'Response sent',
   request: { method: 'POST', url: '/api/v1/nutrition' },
-  status: 401,
+  status: 500,
+  errors: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "1611d8cd-6b57-43cc-8085-65571a6eb01f",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fats: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mcarbohydrates\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mcarbohydrates\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
   level: 'info',
-  timestamp: '04-12-2024 07:43:20'
+  timestamp: '08-12-2024 09:42:08'
 }
 {
-  message: 'Request received',
-  method: 'GET',
-  url: '/images/1733269170898.jpeg',
-  params: {},
-  query: {},
-  body: {},
+  message: 'Server is running on port 8080',
   level: 'info',
-  timestamp: '04-12-2024 07:59:07'
+  timestamp: '08-12-2024 09:43:06'
 }
 {
-  message: 'Authorization header missing or invalid format',
+  message: 'Server is running on port 8080',
   level: 'info',
-  timestamp: '04-12-2024 07:59:07'
-}
-{
-  message: 'Response has no data or errors',
-  request: { method: 'GET', url: '/images/1733269170898.jpeg' },
-  status: 401,
-  level: 'info',
-  timestamp: '04-12-2024 07:59:07'
-}
-{
-  message: 'Request received',
-  method: 'GET',
-  url: '/favicon.ico',
-  params: {},
-  query: {},
-  body: {},
-  level: 'info',
-  timestamp: '04-12-2024 07:59:08'
-}
-{
-  message: 'Authorization header missing or invalid format',
-  level: 'info',
-  timestamp: '04-12-2024 07:59:08'
-}
-{
-  message: 'Response has no data or errors',
-  request: { method: 'GET', url: '/favicon.ico' },
-  status: 401,
-  level: 'info',
-  timestamp: '04-12-2024 07:59:08'
-}
-{
-  message: 'Request received',
-  method: 'GET',
-  url: '/images/1733269170898.jpeg',
-  params: {},
-  query: {},
-  body: {},
-  level: 'info',
-  timestamp: '04-12-2024 07:59:58'
-}
-{
-  message: 'Authorization header missing or invalid format',
-  level: 'info',
-  timestamp: '04-12-2024 07:59:58'
-}
-{
-  message: 'Response has no data or errors',
-  request: { method: 'GET', url: '/images/1733269170898.jpeg' },
-  status: 401,
-  level: 'info',
-  timestamp: '04-12-2024 07:59:58'
-}
-{
-  message: 'Request received',
-  method: 'GET',
-  url: '/favicon.ico',
-  params: {},
-  query: {},
-  body: {},
-  level: 'info',
-  timestamp: '04-12-2024 07:59:59'
-}
-{
-  message: 'Authorization header missing or invalid format',
-  level: 'info',
-  timestamp: '04-12-2024 07:59:59'
-}
-{
-  message: 'Response has no data or errors',
-  request: { method: 'GET', url: '/favicon.ico' },
-  status: 401,
-  level: 'info',
-  timestamp: '04-12-2024 07:59:59'
-}
-{
-  message: 'Request received',
-  method: 'POST',
-  url: '/api/v1/measure',
-  params: {},
-  query: {},
-  body: {},
-  level: 'info',
-  timestamp: '04-12-2024 10:42:17'
-}
-{
-  message: 'Invalid or expired token',
-  level: 'info',
-  timestamp: '04-12-2024 10:42:17'
-}
-{
-  message: 'Response has no data or errors',
-  request: { method: 'POST', url: '/api/v1/measure' },
-  status: 401,
-  level: 'info',
-  timestamp: '04-12-2024 10:42:17'
+  timestamp: '08-12-2024 09:43:07'
 }

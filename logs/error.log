@@ -1,0 +1,1686 @@
+{
+  status: 405,
+  statusText: 'METHOD NOT ALLOWED',
+  headers: Object [AxiosHeaders] {
+    server: 'gunicorn',
+    date: 'Sun, 08 Dec 2024 02:34:46 GMT',
+    connection: 'close',
+    'content-type': 'text/html; charset=utf-8',
+    allow: 'POST, OPTIONS',
+    'content-length': '153'
+  },
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: {
+      FormData: [Function: FormData] {
+        LINE_BREAK: '\r\n',
+        DEFAULT_CONTENT_TYPE: 'application/octet-stream'
+      },
+      Blob: [class Blob]
+    },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.8',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    baseURL: 'http://34.101.97.102:8080',
+    user_id: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000,
+    method: 'get',
+    url: '/add-food',
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    socket: <ref *2> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _events: {
+        close: [ [Function: onClose], [Function: socketCloseListener] ],
+        error: [Function: socketErrorListener],
+        prefinish: undefined,
+        finish: [Function: bound onceWrapper] {
+          listener: [Function (anonymous)]
+        },
+        drain: undefined,
+        data: undefined,
+        end: [Function: onReadableStreamEnd],
+        readable: undefined,
+        connect: undefined,
+        free: [Function: onFree],
+        timeout: [Function: onTimeout],
+        agentRemove: [Function: onRemove]
+      },
+      _readableState: ReadableState {
+        highWaterMark: 16384,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        [Symbol(kState)]: 60303620
+      },
+      _writableState: WritableState {
+        highWaterMark: 16384,
+        length: 0,
+        corked: 0,
+        onwrite: [Function: bound onwrite],
+        writelen: 0,
+        bufferedIndex: 0,
+        pendingcb: 1,
+        [Symbol(kState)]: 1091310852,
+        [Symbol(kBufferedValue)]: null,
+        [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+      },
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      [Symbol(async_id_symbol)]: 137,
+      [Symbol(kHandle)]: TCP {
+        reading: true,
+        onconnection: null,
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 108353,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 136,
+        [Symbol(triggerId)]: 0
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    _header: 'GET /add-food HTTP/1.1\r\n' +
+      'Accept: application/json\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.8\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: 34.101.97.102:8080\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype] {
+        free: [Function (anonymous)],
+        newListener: [Function: maybeEnableKeylog]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype] {
+        keepAlive: true,
+        scheduling: 'lifo',
+        timeout: 5000,
+        noDelay: true,
+        path: null
+      },
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {
+        '34.101.97.102:8080:': [
+          <ref *2> Socket {
+            connecting: false,
+            _hadError: false,
+            _parent: null,
+            _host: null,
+            _closeAfterHandlingError: false,
+            _events: {
+              close: [ [Function: onClose], [Function: socketCloseListener] ],
+              error: [Function: socketErrorListener],
+              prefinish: undefined,
+              finish: [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              },
+              drain: undefined,
+              data: undefined,
+              end: [Function: onReadableStreamEnd],
+              readable: undefined,
+              connect: undefined,
+              free: [Function: onFree],
+              timeout: [Function: onTimeout],
+              agentRemove: [Function: onRemove]
+            },
+            _readableState: ReadableState {
+              highWaterMark: 16384,
+              buffer: [],
+              bufferIndex: 0,
+              length: 0,
+              pipes: [],
+              awaitDrainWriters: null,
+              [Symbol(kState)]: 60303620
+            },
+            _writableState: WritableState {
+              highWaterMark: 16384,
+              length: 0,
+              corked: 0,
+              onwrite: [Function: bound onwrite],
+              writelen: 0,
+              bufferedIndex: 0,
+              pendingcb: 1,
+              [Symbol(kState)]: 1091310852,
+              [Symbol(kBufferedValue)]: null,
+              [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+            },
+            allowHalfOpen: false,
+            _maxListeners: undefined,
+            _eventsCount: 7,
+            _sockname: null,
+            _pendingData: null,
+            _pendingEncoding: '',
+            server: null,
+            _server: null,
+            timeout: 5000,
+            parser: null,
+            _httpMessage: [Circular *1],
+            [Symbol(async_id_symbol)]: 137,
+            [Symbol(kHandle)]: TCP {
+              reading: true,
+              onconnection: null,
+              [Symbol(owner_symbol)]: [Circular *2]
+            },
+            [Symbol(lastWriteQueueSize)]: 0,
+            [Symbol(timeout)]: Timeout {
+              _idleTimeout: 5000,
+              _idlePrev: [TimersList],
+              _idleNext: [TimersList],
+              _idleStart: 108353,
+              _onTimeout: [Function: bound ],
+              _timerArgs: undefined,
+              _repeat: null,
+              _destroyed: false,
+              [Symbol(refed)]: false,
+              [Symbol(kHasPrimitive)]: false,
+              [Symbol(asyncId)]: 136,
+              [Symbol(triggerId)]: 0
+            },
+            [Symbol(kBuffer)]: null,
+            [Symbol(kBufferCb)]: null,
+            [Symbol(kBufferGen)]: null,
+            [Symbol(shapeMode)]: true,
+            [Symbol(kCapture)]: false,
+            [Symbol(kSetNoDelay)]: true,
+            [Symbol(kSetKeepAlive)]: true,
+            [Symbol(kSetKeepAliveInitialDelay)]: 60,
+            [Symbol(kBytesRead)]: 0,
+            [Symbol(kBytesWritten)]: 0
+          }
+        ]
+      },
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/add-food',
+    _ended: true,
+    res: IncomingMessage {
+      _events: {
+        close: undefined,
+        error: [Function: handleStreamError],
+        data: [Function: handleStreamData],
+        end: [ [Function: responseOnEnd], [Function: handleStreamEnd] ],
+        readable: undefined,
+        finish: undefined,
+        aborted: [Function: handlerStreamAborted]
+      },
+      _readableState: ReadableState {
+        highWaterMark: 16384,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        [Symbol(kState)]: 194512764
+      },
+      _maxListeners: undefined,
+      socket: <ref *2> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          error: [Function: socketErrorListener],
+          prefinish: undefined,
+          finish: [Function: bound onceWrapper] {
+            listener: [Function (anonymous)]
+          },
+          drain: undefined,
+          data: undefined,
+          end: [Function: onReadableStreamEnd],
+          readable: undefined,
+          connect: undefined,
+          free: [Function: onFree],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 16384,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          [Symbol(kState)]: 60303620
+        },
+        _writableState: WritableState {
+          highWaterMark: 16384,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 1,
+          [Symbol(kState)]: 1091310852,
+          [Symbol(kBufferedValue)]: null,
+          [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+        },
+        allowHalfOpen: false,
+        _maxListeners: undefined,
+        _eventsCount: 7,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        timeout: 5000,
+        parser: null,
+        _httpMessage: [Circular *1],
+        [Symbol(async_id_symbol)]: 137,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: Timeout {
+          _idleTimeout: 5000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 108353,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 136,
+          [Symbol(triggerId)]: 0
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(shapeMode)]: true,
+        [Symbol(kCapture)]: false,
+        [Symbol(kSetNoDelay)]: true,
+        [Symbol(kSetKeepAlive)]: true,
+        [Symbol(kSetKeepAliveInitialDelay)]: 60,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0
+      },
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [
+        'Server',
+        'gunicorn',
+        'Date',
+        'Sun, 08 Dec 2024 02:34:46 GMT',
+        'Connection',
+        'close',
+        'Content-Type',
+        'text/html; charset=utf-8',
+        'Allow',
+        'POST, OPTIONS',
+        'Content-Length',
+        '153'
+      ],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 405,
+      statusMessage: 'METHOD NOT ALLOWED',
+      client: <ref *2> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          error: [Function: socketErrorListener],
+          prefinish: undefined,
+          finish: [Function: bound onceWrapper] {
+            listener: [Function (anonymous)]
+          },
+          drain: undefined,
+          data: undefined,
+          end: [Function: onReadableStreamEnd],
+          readable: undefined,
+          connect: undefined,
+          free: [Function: onFree],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 16384,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          [Symbol(kState)]: 60303620
+        },
+        _writableState: WritableState {
+          highWaterMark: 16384,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 1,
+          [Symbol(kState)]: 1091310852,
+          [Symbol(kBufferedValue)]: null,
+          [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+        },
+        allowHalfOpen: false,
+        _maxListeners: undefined,
+        _eventsCount: 7,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        timeout: 5000,
+        parser: null,
+        _httpMessage: [Circular *1],
+        [Symbol(async_id_symbol)]: 137,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: Timeout {
+          _idleTimeout: 5000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 108353,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 136,
+          [Symbol(triggerId)]: 0
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(shapeMode)]: true,
+        [Symbol(kCapture)]: false,
+        [Symbol(kSetNoDelay)]: true,
+        [Symbol(kSetKeepAlive)]: true,
+        [Symbol(kSetKeepAliveInitialDelay)]: 60,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0
+      },
+      _consuming: true,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://34.101.97.102:8080/add-food',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: {
+        server: 'gunicorn',
+        date: 'Sun, 08 Dec 2024 02:34:46 GMT',
+        connection: 'close',
+        'content-type': 'text/html; charset=utf-8',
+        allow: 'POST, OPTIONS',
+        'content-length': '153'
+      },
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: '34.101.97.102',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: {
+        close: undefined,
+        error: [Function: handleRequestError],
+        prefinish: undefined,
+        finish: undefined,
+        drain: undefined,
+        response: [Function: handleResponse],
+        socket: [Function: handleRequestSocket]
+      },
+      _writableState: WritableState {
+        highWaterMark: 16384,
+        length: 0,
+        corked: 0,
+        onwrite: [Function: bound onwrite],
+        writelen: 0,
+        bufferedIndex: 0,
+        pendingcb: 0,
+        [Symbol(kState)]: 17580812,
+        [Symbol(kBufferedValue)]: null
+      },
+      _maxListeners: undefined,
+      _options: {
+        maxRedirects: 21,
+        maxBodyLength: Infinity,
+        protocol: 'http:',
+        path: '/add-food',
+        method: 'GET',
+        headers: [Object: null prototype] {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'axios/1.7.8',
+          'Accept-Encoding': 'gzip, compress, deflate, br'
+        },
+        agents: { http: undefined, https: undefined },
+        auth: undefined,
+        family: undefined,
+        beforeRedirect: [Function: dispatchBeforeRedirect],
+        beforeRedirects: { proxy: [Function: beforeRedirect] },
+        hostname: '34.101.97.102',
+        port: '8080',
+        agent: undefined,
+        nativeProtocols: {
+          'http:': {
+            _connectionListener: [Function: connectionListener],
+            METHODS: [
+              'ACL',         'BIND',       'CHECKOUT',
+              'CONNECT',     'COPY',       'DELETE',
+              'GET',         'HEAD',       'LINK',
+              'LOCK',        'M-SEARCH',   'MERGE',
+              'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+              'MOVE',        'NOTIFY',     'OPTIONS',
+              'PATCH',       'POST',       'PROPFIND',
+              'PROPPATCH',   'PURGE',      'PUT',
+              'REBIND',      'REPORT',     'SEARCH',
+              'SOURCE',      'SUBSCRIBE',  'TRACE',
+              'UNBIND',      'UNLINK',     'UNLOCK',
+              'UNSUBSCRIBE'
+            ],
+            STATUS_CODES: {
+              '100': 'Continue',
+              '101': 'Switching Protocols',
+              '102': 'Processing',
+              '103': 'Early Hints',
+              '200': 'OK',
+              '201': 'Created',
+              '202': 'Accepted',
+              '203': 'Non-Authoritative Information',
+              '204': 'No Content',
+              '205': 'Reset Content',
+              '206': 'Partial Content',
+              '207': 'Multi-Status',
+              '208': 'Already Reported',
+              '226': 'IM Used',
+              '300': 'Multiple Choices',
+              '301': 'Moved Permanently',
+              '302': 'Found',
+              '303': 'See Other',
+              '304': 'Not Modified',
+              '305': 'Use Proxy',
+              '307': 'Temporary Redirect',
+              '308': 'Permanent Redirect',
+              '400': 'Bad Request',
+              '401': 'Unauthorized',
+              '402': 'Payment Required',
+              '403': 'Forbidden',
+              '404': 'Not Found',
+              '405': 'Method Not Allowed',
+              '406': 'Not Acceptable',
+              '407': 'Proxy Authentication Required',
+              '408': 'Request Timeout',
+              '409': 'Conflict',
+              '410': 'Gone',
+              '411': 'Length Required',
+              '412': 'Precondition Failed',
+              '413': 'Payload Too Large',
+              '414': 'URI Too Long',
+              '415': 'Unsupported Media Type',
+              '416': 'Range Not Satisfiable',
+              '417': 'Expectation Failed',
+              '418': "I'm a Teapot",
+              '421': 'Misdirected Request',
+              '422': 'Unprocessable Entity',
+              '423': 'Locked',
+              '424': 'Failed Dependency',
+              '425': 'Too Early',
+              '426': 'Upgrade Required',
+              '428': 'Precondition Required',
+              '429': 'Too Many Requests',
+              '431': 'Request Header Fields Too Large',
+              '451': 'Unavailable For Legal Reasons',
+              '500': 'Internal Server Error',
+              '501': 'Not Implemented',
+              '502': 'Bad Gateway',
+              '503': 'Service Unavailable',
+              '504': 'Gateway Timeout',
+              '505': 'HTTP Version Not Supported',
+              '506': 'Variant Also Negotiates',
+              '507': 'Insufficient Storage',
+              '508': 'Loop Detected',
+              '509': 'Bandwidth Limit Exceeded',
+              '510': 'Not Extended',
+              '511': 'Network Authentication Required'
+            },
+            Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+            ClientRequest: [Function: ClientRequest],
+            IncomingMessage: [Function: IncomingMessage],
+            OutgoingMessage: [Function: OutgoingMessage],
+            Server: [Function: Server],
+            ServerResponse: [Function: ServerResponse],
+            createServer: [Function: createServer],
+            validateHeaderName: [Function: wrappedFn] {
+              withoutStackTrace: [Function (anonymous)]
+            },
+            validateHeaderValue: [Function: wrappedFn] {
+              withoutStackTrace: [Function (anonymous)]
+            },
+            get: [Function: get],
+            request: [Function: request],
+            setMaxIdleHTTPParsers: [Function: setMaxIdleHTTPParsers],
+            maxHeaderSize: [Getter],
+            globalAgent: [Getter/Setter]
+          },
+          'https:': {
+            Agent: [Function: Agent],
+            globalAgent: Agent {
+              _events: [Object: null prototype] {
+                free: [Function (anonymous)],
+                newListener: [Function: maybeEnableKeylog]
+              },
+              _eventsCount: 2,
+              _maxListeners: undefined,
+              defaultPort: 443,
+              protocol: 'https:',
+              options: [Object: null prototype] {
+                keepAlive: true,
+                scheduling: 'lifo',
+                timeout: 5000,
+                noDelay: true,
+                path: null
+              },
+              requests: [Object: null prototype] {},
+              sockets: [Object: null prototype] {},
+              freeSockets: [Object: null prototype] {},
+              keepAliveMsecs: 1000,
+              keepAlive: true,
+              maxSockets: Infinity,
+              maxFreeSockets: 256,
+              scheduling: 'lifo',
+              maxTotalSockets: Infinity,
+              totalSocketCount: 0,
+              maxCachedSessions: 100,
+              _sessionCache: { map: {}, list: [] },
+              [Symbol(shapeMode)]: false,
+              [Symbol(kCapture)]: false
+            },
+            Server: [Function: Server],
+            createServer: [Function: createServer],
+            get: [Function: get],
+            request: [Function: request]
+          }
+        },
+        pathname: '/add-food'
+      },
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://34.101.97.102:8080/add-food',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [ 'Accept', 'application/json' ],
+      'content-type': [ 'Content-Type', 'application/json' ],
+      'user-agent': [ 'User-Agent', 'axios/1.7.8' ],
+      'accept-encoding': [ 'Accept-Encoding', 'gzip, compress, deflate, br' ],
+      host: [ 'Host', '34.101.97.102:8080' ]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  data: '<!doctype html>\n' +
+    '<html lang=en>\n' +
+    '<title>405 Method Not Allowed</title>\n' +
+    '<h1>Method Not Allowed</h1>\n' +
+    '<p>The method is not allowed for the requested URL.</p>\n',
+  level: 'error',
+  message: 'Error response:',
+  timestamp: '08-12-2024 09:34:46'
+}
+{
+  message: 'AxiosError: Request failed with status code 405',
+  errors: null,
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  level: 'error',
+  timestamp: '08-12-2024 09:34:46'
+}
+{
+  status: 405,
+  statusText: 'METHOD NOT ALLOWED',
+  headers: Object [AxiosHeaders] {
+    server: 'gunicorn',
+    date: 'Sun, 08 Dec 2024 02:35:30 GMT',
+    connection: 'close',
+    'content-type': 'text/html; charset=utf-8',
+    allow: 'POST, OPTIONS',
+    'content-length': '153'
+  },
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: {
+      FormData: [Function: FormData] {
+        LINE_BREAK: '\r\n',
+        DEFAULT_CONTENT_TYPE: 'application/octet-stream'
+      },
+      Blob: [class Blob]
+    },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'User-Agent': 'axios/1.7.8',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    baseURL: 'http://34.101.97.102:8080',
+    user_id: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000,
+    method: 'get',
+    url: '/add-food',
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: false,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: false,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: false,
+    socket: <ref *2> Socket {
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: null,
+      _closeAfterHandlingError: false,
+      _events: {
+        close: [ [Function: onClose], [Function: socketCloseListener] ],
+        error: [Function: socketErrorListener],
+        prefinish: undefined,
+        finish: [Function: bound onceWrapper] {
+          listener: [Function (anonymous)]
+        },
+        drain: undefined,
+        data: undefined,
+        end: [Function: onReadableStreamEnd],
+        readable: undefined,
+        connect: undefined,
+        free: [Function: onFree],
+        timeout: [Function: onTimeout],
+        agentRemove: [Function: onRemove]
+      },
+      _readableState: ReadableState {
+        highWaterMark: 16384,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        [Symbol(kState)]: 60303620
+      },
+      _writableState: WritableState {
+        highWaterMark: 16384,
+        length: 0,
+        corked: 0,
+        onwrite: [Function: bound onwrite],
+        writelen: 0,
+        bufferedIndex: 0,
+        pendingcb: 1,
+        [Symbol(kState)]: 1091310852,
+        [Symbol(kBufferedValue)]: null,
+        [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+      },
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _eventsCount: 7,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: null,
+      _server: null,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: [Circular *1],
+      [Symbol(async_id_symbol)]: 97,
+      [Symbol(kHandle)]: TCP {
+        reading: true,
+        onconnection: null,
+        [Symbol(owner_symbol)]: [Circular *2]
+      },
+      [Symbol(lastWriteQueueSize)]: 0,
+      [Symbol(timeout)]: Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [TimersList],
+        _idleStart: 7531,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        [Symbol(refed)]: false,
+        [Symbol(kHasPrimitive)]: false,
+        [Symbol(asyncId)]: 96,
+        [Symbol(triggerId)]: 0
+      },
+      [Symbol(kBuffer)]: null,
+      [Symbol(kBufferCb)]: null,
+      [Symbol(kBufferGen)]: null,
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kSetNoDelay)]: true,
+      [Symbol(kSetKeepAlive)]: true,
+      [Symbol(kSetKeepAliveInitialDelay)]: 60,
+      [Symbol(kBytesRead)]: 0,
+      [Symbol(kBytesWritten)]: 0
+    },
+    _header: 'GET /add-food HTTP/1.1\r\n' +
+      'Accept: application/json\r\n' +
+      'Content-Type: application/json\r\n' +
+      'User-Agent: axios/1.7.8\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: 34.101.97.102:8080\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype] {
+        free: [Function (anonymous)],
+        newListener: [Function: maybeEnableKeylog]
+      },
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object: null prototype] {
+        keepAlive: true,
+        scheduling: 'lifo',
+        timeout: 5000,
+        noDelay: true,
+        path: null
+      },
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {
+        '34.101.97.102:8080:': [
+          <ref *2> Socket {
+            connecting: false,
+            _hadError: false,
+            _parent: null,
+            _host: null,
+            _closeAfterHandlingError: false,
+            _events: {
+              close: [ [Function: onClose], [Function: socketCloseListener] ],
+              error: [Function: socketErrorListener],
+              prefinish: undefined,
+              finish: [Function: bound onceWrapper] {
+                listener: [Function (anonymous)]
+              },
+              drain: undefined,
+              data: undefined,
+              end: [Function: onReadableStreamEnd],
+              readable: undefined,
+              connect: undefined,
+              free: [Function: onFree],
+              timeout: [Function: onTimeout],
+              agentRemove: [Function: onRemove]
+            },
+            _readableState: ReadableState {
+              highWaterMark: 16384,
+              buffer: [],
+              bufferIndex: 0,
+              length: 0,
+              pipes: [],
+              awaitDrainWriters: null,
+              [Symbol(kState)]: 60303620
+            },
+            _writableState: WritableState {
+              highWaterMark: 16384,
+              length: 0,
+              corked: 0,
+              onwrite: [Function: bound onwrite],
+              writelen: 0,
+              bufferedIndex: 0,
+              pendingcb: 1,
+              [Symbol(kState)]: 1091310852,
+              [Symbol(kBufferedValue)]: null,
+              [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+            },
+            allowHalfOpen: false,
+            _maxListeners: undefined,
+            _eventsCount: 7,
+            _sockname: null,
+            _pendingData: null,
+            _pendingEncoding: '',
+            server: null,
+            _server: null,
+            timeout: 5000,
+            parser: null,
+            _httpMessage: [Circular *1],
+            [Symbol(async_id_symbol)]: 97,
+            [Symbol(kHandle)]: TCP {
+              reading: true,
+              onconnection: null,
+              [Symbol(owner_symbol)]: [Circular *2]
+            },
+            [Symbol(lastWriteQueueSize)]: 0,
+            [Symbol(timeout)]: Timeout {
+              _idleTimeout: 5000,
+              _idlePrev: [TimersList],
+              _idleNext: [TimersList],
+              _idleStart: 7531,
+              _onTimeout: [Function: bound ],
+              _timerArgs: undefined,
+              _repeat: null,
+              _destroyed: false,
+              [Symbol(refed)]: false,
+              [Symbol(kHasPrimitive)]: false,
+              [Symbol(asyncId)]: 96,
+              [Symbol(triggerId)]: 0
+            },
+            [Symbol(kBuffer)]: null,
+            [Symbol(kBufferCb)]: null,
+            [Symbol(kBufferGen)]: null,
+            [Symbol(shapeMode)]: true,
+            [Symbol(kCapture)]: false,
+            [Symbol(kSetNoDelay)]: true,
+            [Symbol(kSetKeepAlive)]: true,
+            [Symbol(kSetKeepAliveInitialDelay)]: 60,
+            [Symbol(kBytesRead)]: 0,
+            [Symbol(kBytesWritten)]: 0
+          }
+        ]
+      },
+      freeSockets: [Object: null prototype] {},
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 1,
+      [Symbol(shapeMode)]: false,
+      [Symbol(kCapture)]: false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/add-food',
+    _ended: true,
+    res: IncomingMessage {
+      _events: {
+        close: undefined,
+        error: [Function: handleStreamError],
+        data: [Function: handleStreamData],
+        end: [ [Function: responseOnEnd], [Function: handleStreamEnd] ],
+        readable: undefined,
+        finish: undefined,
+        aborted: [Function: handlerStreamAborted]
+      },
+      _readableState: ReadableState {
+        highWaterMark: 16384,
+        buffer: [],
+        bufferIndex: 0,
+        length: 0,
+        pipes: [],
+        awaitDrainWriters: null,
+        [Symbol(kState)]: 194512764
+      },
+      _maxListeners: undefined,
+      socket: <ref *2> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          error: [Function: socketErrorListener],
+          prefinish: undefined,
+          finish: [Function: bound onceWrapper] {
+            listener: [Function (anonymous)]
+          },
+          drain: undefined,
+          data: undefined,
+          end: [Function: onReadableStreamEnd],
+          readable: undefined,
+          connect: undefined,
+          free: [Function: onFree],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 16384,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          [Symbol(kState)]: 60303620
+        },
+        _writableState: WritableState {
+          highWaterMark: 16384,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 1,
+          [Symbol(kState)]: 1091310852,
+          [Symbol(kBufferedValue)]: null,
+          [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+        },
+        allowHalfOpen: false,
+        _maxListeners: undefined,
+        _eventsCount: 7,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        timeout: 5000,
+        parser: null,
+        _httpMessage: [Circular *1],
+        [Symbol(async_id_symbol)]: 97,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: Timeout {
+          _idleTimeout: 5000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 7531,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 96,
+          [Symbol(triggerId)]: 0
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(shapeMode)]: true,
+        [Symbol(kCapture)]: false,
+        [Symbol(kSetNoDelay)]: true,
+        [Symbol(kSetKeepAlive)]: true,
+        [Symbol(kSetKeepAliveInitialDelay)]: 60,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0
+      },
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [
+        'Server',
+        'gunicorn',
+        'Date',
+        'Sun, 08 Dec 2024 02:35:30 GMT',
+        'Connection',
+        'close',
+        'Content-Type',
+        'text/html; charset=utf-8',
+        'Allow',
+        'POST, OPTIONS',
+        'Content-Length',
+        '153'
+      ],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 405,
+      statusMessage: 'METHOD NOT ALLOWED',
+      client: <ref *2> Socket {
+        connecting: false,
+        _hadError: false,
+        _parent: null,
+        _host: null,
+        _closeAfterHandlingError: false,
+        _events: {
+          close: [ [Function: onClose], [Function: socketCloseListener] ],
+          error: [Function: socketErrorListener],
+          prefinish: undefined,
+          finish: [Function: bound onceWrapper] {
+            listener: [Function (anonymous)]
+          },
+          drain: undefined,
+          data: undefined,
+          end: [Function: onReadableStreamEnd],
+          readable: undefined,
+          connect: undefined,
+          free: [Function: onFree],
+          timeout: [Function: onTimeout],
+          agentRemove: [Function: onRemove]
+        },
+        _readableState: ReadableState {
+          highWaterMark: 16384,
+          buffer: [],
+          bufferIndex: 0,
+          length: 0,
+          pipes: [],
+          awaitDrainWriters: null,
+          [Symbol(kState)]: 60303620
+        },
+        _writableState: WritableState {
+          highWaterMark: 16384,
+          length: 0,
+          corked: 0,
+          onwrite: [Function: bound onwrite],
+          writelen: 0,
+          bufferedIndex: 0,
+          pendingcb: 1,
+          [Symbol(kState)]: 1091310852,
+          [Symbol(kBufferedValue)]: null,
+          [Symbol(kWriteCbValue)]: [Function: bound onFinish]
+        },
+        allowHalfOpen: false,
+        _maxListeners: undefined,
+        _eventsCount: 7,
+        _sockname: null,
+        _pendingData: null,
+        _pendingEncoding: '',
+        server: null,
+        _server: null,
+        timeout: 5000,
+        parser: null,
+        _httpMessage: [Circular *1],
+        [Symbol(async_id_symbol)]: 97,
+        [Symbol(kHandle)]: TCP {
+          reading: true,
+          onconnection: null,
+          [Symbol(owner_symbol)]: [Circular *2]
+        },
+        [Symbol(lastWriteQueueSize)]: 0,
+        [Symbol(timeout)]: Timeout {
+          _idleTimeout: 5000,
+          _idlePrev: [TimersList],
+          _idleNext: [TimersList],
+          _idleStart: 7531,
+          _onTimeout: [Function: bound ],
+          _timerArgs: undefined,
+          _repeat: null,
+          _destroyed: false,
+          [Symbol(refed)]: false,
+          [Symbol(kHasPrimitive)]: false,
+          [Symbol(asyncId)]: 96,
+          [Symbol(triggerId)]: 0
+        },
+        [Symbol(kBuffer)]: null,
+        [Symbol(kBufferCb)]: null,
+        [Symbol(kBufferGen)]: null,
+        [Symbol(shapeMode)]: true,
+        [Symbol(kCapture)]: false,
+        [Symbol(kSetNoDelay)]: true,
+        [Symbol(kSetKeepAlive)]: true,
+        [Symbol(kSetKeepAliveInitialDelay)]: 60,
+        [Symbol(kBytesRead)]: 0,
+        [Symbol(kBytesWritten)]: 0
+      },
+      _consuming: true,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'http://34.101.97.102:8080/add-food',
+      redirects: [],
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: {
+        server: 'gunicorn',
+        date: 'Sun, 08 Dec 2024 02:35:30 GMT',
+        connection: 'close',
+        'content-type': 'text/html; charset=utf-8',
+        allow: 'POST, OPTIONS',
+        'content-length': '153'
+      },
+      [Symbol(kHeadersCount)]: 12,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    aborted: false,
+    timeoutCb: [Function: emitRequestTimeout],
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: '34.101.97.102',
+    protocol: 'http:',
+    _redirectable: Writable {
+      _events: {
+        close: undefined,
+        error: [Function: handleRequestError],
+        prefinish: undefined,
+        finish: undefined,
+        drain: undefined,
+        response: [Function: handleResponse],
+        socket: [Function: handleRequestSocket]
+      },
+      _writableState: WritableState {
+        highWaterMark: 16384,
+        length: 0,
+        corked: 0,
+        onwrite: [Function: bound onwrite],
+        writelen: 0,
+        bufferedIndex: 0,
+        pendingcb: 0,
+        [Symbol(kState)]: 17580812,
+        [Symbol(kBufferedValue)]: null
+      },
+      _maxListeners: undefined,
+      _options: {
+        maxRedirects: 21,
+        maxBodyLength: Infinity,
+        protocol: 'http:',
+        path: '/add-food',
+        method: 'GET',
+        headers: [Object: null prototype] {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'User-Agent': 'axios/1.7.8',
+          'Accept-Encoding': 'gzip, compress, deflate, br'
+        },
+        agents: { http: undefined, https: undefined },
+        auth: undefined,
+        family: undefined,
+        beforeRedirect: [Function: dispatchBeforeRedirect],
+        beforeRedirects: { proxy: [Function: beforeRedirect] },
+        hostname: '34.101.97.102',
+        port: '8080',
+        agent: undefined,
+        nativeProtocols: {
+          'http:': {
+            _connectionListener: [Function: connectionListener],
+            METHODS: [
+              'ACL',         'BIND',       'CHECKOUT',
+              'CONNECT',     'COPY',       'DELETE',
+              'GET',         'HEAD',       'LINK',
+              'LOCK',        'M-SEARCH',   'MERGE',
+              'MKACTIVITY',  'MKCALENDAR', 'MKCOL',
+              'MOVE',        'NOTIFY',     'OPTIONS',
+              'PATCH',       'POST',       'PROPFIND',
+              'PROPPATCH',   'PURGE',      'PUT',
+              'REBIND',      'REPORT',     'SEARCH',
+              'SOURCE',      'SUBSCRIBE',  'TRACE',
+              'UNBIND',      'UNLINK',     'UNLOCK',
+              'UNSUBSCRIBE'
+            ],
+            STATUS_CODES: {
+              '100': 'Continue',
+              '101': 'Switching Protocols',
+              '102': 'Processing',
+              '103': 'Early Hints',
+              '200': 'OK',
+              '201': 'Created',
+              '202': 'Accepted',
+              '203': 'Non-Authoritative Information',
+              '204': 'No Content',
+              '205': 'Reset Content',
+              '206': 'Partial Content',
+              '207': 'Multi-Status',
+              '208': 'Already Reported',
+              '226': 'IM Used',
+              '300': 'Multiple Choices',
+              '301': 'Moved Permanently',
+              '302': 'Found',
+              '303': 'See Other',
+              '304': 'Not Modified',
+              '305': 'Use Proxy',
+              '307': 'Temporary Redirect',
+              '308': 'Permanent Redirect',
+              '400': 'Bad Request',
+              '401': 'Unauthorized',
+              '402': 'Payment Required',
+              '403': 'Forbidden',
+              '404': 'Not Found',
+              '405': 'Method Not Allowed',
+              '406': 'Not Acceptable',
+              '407': 'Proxy Authentication Required',
+              '408': 'Request Timeout',
+              '409': 'Conflict',
+              '410': 'Gone',
+              '411': 'Length Required',
+              '412': 'Precondition Failed',
+              '413': 'Payload Too Large',
+              '414': 'URI Too Long',
+              '415': 'Unsupported Media Type',
+              '416': 'Range Not Satisfiable',
+              '417': 'Expectation Failed',
+              '418': "I'm a Teapot",
+              '421': 'Misdirected Request',
+              '422': 'Unprocessable Entity',
+              '423': 'Locked',
+              '424': 'Failed Dependency',
+              '425': 'Too Early',
+              '426': 'Upgrade Required',
+              '428': 'Precondition Required',
+              '429': 'Too Many Requests',
+              '431': 'Request Header Fields Too Large',
+              '451': 'Unavailable For Legal Reasons',
+              '500': 'Internal Server Error',
+              '501': 'Not Implemented',
+              '502': 'Bad Gateway',
+              '503': 'Service Unavailable',
+              '504': 'Gateway Timeout',
+              '505': 'HTTP Version Not Supported',
+              '506': 'Variant Also Negotiates',
+              '507': 'Insufficient Storage',
+              '508': 'Loop Detected',
+              '509': 'Bandwidth Limit Exceeded',
+              '510': 'Not Extended',
+              '511': 'Network Authentication Required'
+            },
+            Agent: [Function: Agent] { defaultMaxSockets: Infinity },
+            ClientRequest: [Function: ClientRequest],
+            IncomingMessage: [Function: IncomingMessage],
+            OutgoingMessage: [Function: OutgoingMessage],
+            Server: [Function: Server],
+            ServerResponse: [Function: ServerResponse],
+            createServer: [Function: createServer],
+            validateHeaderName: [Function: wrappedFn] {
+              withoutStackTrace: [Function (anonymous)]
+            },
+            validateHeaderValue: [Function: wrappedFn] {
+              withoutStackTrace: [Function (anonymous)]
+            },
+            get: [Function: get],
+            request: [Function: request],
+            setMaxIdleHTTPParsers: [Function: setMaxIdleHTTPParsers],
+            maxHeaderSize: [Getter],
+            globalAgent: [Getter/Setter]
+          },
+          'https:': {
+            Agent: [Function: Agent],
+            globalAgent: Agent {
+              _events: [Object: null prototype] {
+                free: [Function (anonymous)],
+                newListener: [Function: maybeEnableKeylog]
+              },
+              _eventsCount: 2,
+              _maxListeners: undefined,
+              defaultPort: 443,
+              protocol: 'https:',
+              options: [Object: null prototype] {
+                keepAlive: true,
+                scheduling: 'lifo',
+                timeout: 5000,
+                noDelay: true,
+                path: null
+              },
+              requests: [Object: null prototype] {},
+              sockets: [Object: null prototype] {},
+              freeSockets: [Object: null prototype] {},
+              keepAliveMsecs: 1000,
+              keepAlive: true,
+              maxSockets: Infinity,
+              maxFreeSockets: 256,
+              scheduling: 'lifo',
+              maxTotalSockets: Infinity,
+              totalSocketCount: 0,
+              maxCachedSessions: 100,
+              _sessionCache: { map: {}, list: [] },
+              [Symbol(shapeMode)]: false,
+              [Symbol(kCapture)]: false
+            },
+            Server: [Function: Server],
+            createServer: [Function: createServer],
+            get: [Function: get],
+            request: [Function: request]
+          }
+        },
+        pathname: '/add-food'
+      },
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'http://34.101.97.102:8080/add-food',
+      [Symbol(shapeMode)]: true,
+      [Symbol(kCapture)]: false
+    },
+    [Symbol(shapeMode)]: false,
+    [Symbol(kCapture)]: false,
+    [Symbol(kBytesWritten)]: 0,
+    [Symbol(kNeedDrain)]: false,
+    [Symbol(corked)]: 0,
+    [Symbol(kOutHeaders)]: [Object: null prototype] {
+      accept: [ 'Accept', 'application/json' ],
+      'content-type': [ 'Content-Type', 'application/json' ],
+      'user-agent': [ 'User-Agent', 'axios/1.7.8' ],
+      'accept-encoding': [ 'Accept-Encoding', 'gzip, compress, deflate, br' ],
+      host: [ 'Host', '34.101.97.102:8080' ]
+    },
+    [Symbol(errored)]: null,
+    [Symbol(kHighWaterMark)]: 16384,
+    [Symbol(kRejectNonStandardBodyWrites)]: false,
+    [Symbol(kUniqueHeaders)]: null
+  },
+  data: '<!doctype html>\n' +
+    '<html lang=en>\n' +
+    '<title>405 Method Not Allowed</title>\n' +
+    '<h1>Method Not Allowed</h1>\n' +
+    '<p>The method is not allowed for the requested URL.</p>\n',
+  level: 'error',
+  message: 'Error response:',
+  timestamp: '08-12-2024 09:35:30'
+}
+{
+  message: 'AxiosError: Request failed with status code 405',
+  errors: null,
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  level: 'error',
+  timestamp: '08-12-2024 09:35:30'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "30f5dfb8-d1d4-48fc-a33b-124bae92d744",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fat: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mfats\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mfats\x1B[39m` is missing.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "30f5dfb8-d1d4-48fc-a33b-124bae92d744",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fat: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mfats\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mfats\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 09:41:20',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "1611d8cd-6b57-43cc-8085-65571a6eb01f",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fats: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mcarbohydrates\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mcarbohydrates\x1B[39m` is missing.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition_Result.create()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:39\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m290\x1B[39m     \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m291\x1B[39m \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m292\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m293\x1B[39m \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition_Result\x1B[34m.\x1B[39m\x1B[36mcreate\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        data: {\n' +
+    '          nutrition_id: "1611d8cd-6b57-43cc-8085-65571a6eb01f",\n' +
+    '          notes: "ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.",\n' +
+    '          calciums: 340,\n' +
+    '          calories: 700,\n' +
+    '          carbohydrate: 70,\n' +
+    '          fats: 42,\n' +
+    '          proteins: 12,\n' +
+    '      \x1B[32m+\x1B[39m   \x1B[32mcarbohydrates\x1B[39m\x1B[32m: \x1B[39m\x1B[32mFloat\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Argument `\x1B[32mcarbohydrates\x1B[39m` is missing.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:293:9)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 09:42:08',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}

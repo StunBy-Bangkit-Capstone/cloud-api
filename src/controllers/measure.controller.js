@@ -82,11 +82,11 @@ async function food_nutrion(req, res, next) {
 
         const result = await measureService.food_nutritions(user_id, validated)
 
-        // res.status(201).json({
-        //     succes: "false",
-        //     message: "Data successfully created",
-        //     data: result
-        // })
+        res.status(201).json({
+            succes: "false",
+            message: "Data successfully created",
+            data: result
+        })
 
     } catch (error) {
         next(error)
