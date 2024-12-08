@@ -239,74 +239,227 @@ async function getDetailMeasurement(data) {
 
 }
 
-// TODO : add makanan
-// TODO : history makanan
 // TODO : register tambahan weight samo length 
 // TODO : ketika register kan udah ada weiht sama length tu bikinin function buat api ini nutrition
 
 
 
 async function food_nutritions(user_id, data) {
-
-    const {food_name,date,portion} = data
-
-    logger.info("start service and searching user")
-    const user = await prisma.user.findUnique({
-        where: {
-            id: user_id
-        }
-    })
-
-    if (!user) {
-        throw new ResponseError(400, "user not found")
-    }
-
-    logger.info("start api food nutrition")
-    let food_nutrition;
     try {
-        food_nutrition = await api.post("/add-food", {
-            user_id,
-            food_name,
-            date,
-            portion
+        logger.info(`Starting food nutrition service for user: ${user_id}`);
+        const {food_name, date, portion} = data;
 
-        })
+        // Check user
+        const user = await prisma.user.findUnique({
+            where: { id: user_id }
+        });
+
+        if (!user) {
+            throw new ResponseError(400, "User not found");
+        }
+
+        // Get nutrition data from API
+        logger.info("Calling food nutrition API");
+        let food_nutrition;
+        try {
+            food_nutrition = await api.post("/add-food", {
+                user_id,
+                food_name,
+                date,
+                portion
+            });
+        } catch (error) {
+            throw new ResponseError(400, `Failed to get food nutrition data: ${error.message}`);
+        }
+
+        // Validate API response
+        if (!food_nutrition?.data?.nutrients) {
+            throw new ResponseError(400, "Invalid response from nutrition API");
+        }
+
+        const {notes, nutrients} = food_nutrition.data;
+        const {calcium, calories, carbohydrate, fat, proteins} = nutrients;
+
+        // Save data using transaction
+        let result;
+        try {
+            result = await prisma.$transaction(async (tx) => {
+                const nutrition = await tx.nutrition.create({
+                    data: {
+                        user_id,
+                        food_name,
+                        date,
+                        portion 
+                    }
+                });
+
+                await tx.nutrition_Result.create({
+                    data: {
+                        nutrition_id: nutrition.id,
+                        notes,
+                        calciums: calcium,
+                        calories,
+                        carbohydrates: carbohydrate,
+                        fats: fat,
+                        proteins 
+                    }
+                });
+
+                return await tx.nutrition.findFirst({
+                    where: {
+                        id: nutrition.id
+                    },
+                    include: {
+                        Nutrition_Result: true
+                    }
+                });
+            });
+
+            logger.info(`Successfully saved nutrition data with ID: ${result.id}`);
+            return result;
+
+        } catch (error) {
+            logger.error(`Failed to save nutrition data: ${error.message}`);
+            throw new ResponseError(500, "Failed to save nutrition data");
+        }
+
     } catch (error) {
-        throw new ResponseError(400, error)
+        logger.error(`Error in food_nutritions: ${error.message}`);
+        throw error;
     }
+}
+async function histories_food_nutrition(user_id) {
+    try {
+        logger.info(`Starting get histories food nutrition for user: ${user_id}`);
 
-    logger.info("start upload to db")
-
-    const {notes,nutrients} = food_nutrition.data
-    const {calcium,calories,carbohydrate,fat,proteins} = nutrients
-
-    if (food_nutrition) {
-       const nutrition =  await prisma.nutrition.create({
-            data :{
-               user_id,
-               food_name,
-               date,
-               portion 
+        const user = await prisma.user.findUnique({
+            where: {
+                id: user_id
             }
-        })
+        });
 
-        await prisma.nutrition_Result.create({
-            data:{
-                nutrition_id : nutrition.id,
-                notes ,
-                calciums : calcium,
-                calories,
-                carbohydrates :carbohydrate,
-                fats :fat,
-                proteins 
+        if (!user) {
+            logger.error(`User with id ${user_id} not found`);
+            throw new ResponseError(400, "User not found");
+        }
 
+        const nutrition_histories = await prisma.nutrition.findMany({
+            where: {
+                user_id: user_id
+            },
+            include: {
+                Nutrition_Result: true
+            },
+            orderBy: {
+                created_at: 'desc'
             }
-        })
+        });
+
+        if (!nutrition_histories || nutrition_histories.length === 0) {
+            logger.info(`No nutrition histories found for user: ${user_id}`);
+            throw new ResponseError(404, "No nutrition histories found");
+        }
+
+        const total_nutrition = nutrition_histories.reduce((acc, curr) => {
+            if (curr.Nutrition_Result) {
+                acc.total_calories += curr.Nutrition_Result.calories || 0;
+                acc.total_proteins += curr.Nutrition_Result.proteins || 0;
+                acc.total_carbohydrates += curr.Nutrition_Result.carbohydrates || 0;
+                acc.total_fats += curr.Nutrition_Result.fats || 0;
+                acc.total_calciums += curr.Nutrition_Result.calciums || 0;
+            }
+            return acc;
+        }, {
+            total_calories: 0,
+            total_proteins: 0,
+            total_carbohydrates: 0,
+            total_fats: 0,
+            total_calciums: 0
+        });
+
+        const formatted_histories = nutrition_histories.map(item => ({
+            id: item.id,
+            food_name: item.food_name,
+            date: item.date,
+            portion: item.portion,
+            created_at: item.created_at,
+            nutrition_details: item.Nutrition_Result ? {
+                notes: item.Nutrition_Result.notes,
+                calciums: item.Nutrition_Result.calciums,
+                calories: item.Nutrition_Result.calories,
+                carbohydrates: item.Nutrition_Result.carbohydrates,
+                fats: item.Nutrition_Result.fats,
+                proteins: item.Nutrition_Result.proteins
+            } : null
+        }));
+
+        logger.info(`Successfully retrieved nutrition histories for user: ${user_id}`);
+
+        return {
+            histories: formatted_histories,
+            total_nutrition
+        };
+
+    } catch (error) {
+        logger.error(`Error in histories_food_nutrition for user ${user_id}: ${error.message}`, { stack: error.stack });
+        throw error;
     }
-
-    return food_nutrition
-
-
 }
 
-module.exports = { measurementBaby, getMeasurements, food_nutritions, getDetailMeasurement };
+
+async function get_detail_nutrition(user_id, nutrition_id) {
+    try {
+        logger.info(`Starting get detail nutrition for user: ${user_id}, nutrition_id: ${nutrition_id}`);
+
+        const nutrition_detail = await prisma.nutrition.findFirst({
+            where: {
+                id: nutrition_id,
+                user_id: user_id // Memastikan nutrisi ini milik user yang request
+            },
+            include: {
+                Nutrition_Result: true,
+                User: {
+                    select: {
+                        id: true,
+                        full_name: true,
+                        email: true
+                    }
+                }
+            }
+        });
+
+        if (!nutrition_detail) {
+            logger.error(`Nutrition with id ${nutrition_id} not found or not owned by user ${user_id}`);
+            throw new ResponseError(404, "Nutrition data not found");
+        }
+
+        const formatted_detail = {
+            id: nutrition_detail.id,
+            food_name: nutrition_detail.food_name,
+            date: nutrition_detail.date,
+            portion: nutrition_detail.portion,
+            created_at: nutrition_detail.created_at,
+            updated_at: nutrition_detail.updated_at,
+            nutrition_result: nutrition_detail.Nutrition_Result ? {
+                id: nutrition_detail.Nutrition_Result.id,
+                notes: nutrition_detail.Nutrition_Result.notes,
+                calciums: nutrition_detail.Nutrition_Result.calciums,
+                calories: nutrition_detail.Nutrition_Result.calories,
+                carbohydrates: nutrition_detail.Nutrition_Result.carbohydrates,
+                fats: nutrition_detail.Nutrition_Result.fats,
+                proteins: nutrition_detail.Nutrition_Result.proteins,
+
+            } : null
+        };
+
+        logger.info(`Successfully retrieved nutrition detail for id: ${nutrition_id}`);
+        
+        return formatted_detail;
+
+    } catch (error) {
+        logger.error(`Error in getDetailNutrition: ${error.message}`, { stack: error.stack });
+        throw error;
+    }
+}
+
+module.exports = { measurementBaby, get_detail_nutrition,histories_food_nutrition,getMeasurements, food_nutritions, getDetailMeasurement };

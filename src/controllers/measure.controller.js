@@ -93,4 +93,44 @@ async function food_nutrion(req, res, next) {
     }
 }
 
-module.exports = { postMeasurement, getMeasurements, food_nutrion ,getDetailMeasurement};
+async function getNutritionHistories(req, res, next) {
+    try {
+        const user_id = req.user.id;
+        logger.info('Getting nutrition histories for user:', user_id);
+
+        const result = await measureService.histories_food_nutrition(user_id);
+
+        res.status(200).json({
+            error: false,
+            message: "Get nutrition histories successfully",
+            data: result
+        });
+
+    } catch (error) {
+        logger.error(`Error in getNutritionHistories: ${error.message}`);
+        next(error);
+    }
+}
+async function getNutritionDetail(req, res, next) {
+    try {
+        const user_id = req.user.id;
+        logger.info('Validating request parameters');
+        
+        const validated = await validate(validation.detail_nutrition_schema, req.params);
+        logger.info('Getting nutrition detail for user:', user_id, 'nutrition_id:', validated.nutrition_id);
+
+        const result = await measureService.get_detail_nutrition(user_id, validated.nutrition_id);
+
+        res.status(200).json({
+            error: false,
+            message: "Get nutrition detail successfully",
+            data: result
+        });
+
+    } catch (error) {
+        logger.error(`Error in getNutritionDetail: ${error.message}`);
+        next(error);
+    }
+}
+
+module.exports = { postMeasurement, getNutritionDetail,getMeasurements,getNutritionHistories, food_nutrion ,getDetailMeasurement};

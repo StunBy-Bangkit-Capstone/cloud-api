@@ -1684,3 +1684,127 @@
   userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
   level: 'error'
 }
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findUnique()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindUnique\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "902a71c5-4f83-4161-8065-741ffa47706a"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findUnique()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindUnique\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "902a71c5-4f83-4161-8065-741ffa47706a"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 10:07:29',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findFirst()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindFirst\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "2d9014b2-26c4-4345-b4fc-ef4d528ee2d9"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findFirst()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindFirst\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "2d9014b2-26c4-4345-b4fc-ef4d528ee2d9"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 10:07:42',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}

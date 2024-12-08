@@ -23,5 +23,9 @@ module.exports = {
 
     detail_schema : Joi.object({
         measure_id : Joi.string().required()
+    }),
+    detail_nutrition_schema : Joi.object({
+        nutrition_id: Joi.string().required()
     })
+
 }

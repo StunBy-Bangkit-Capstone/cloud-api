@@ -297,3 +297,1195 @@
   level: 'info',
   timestamp: '08-12-2024 09:43:07'
 }
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:43:11'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733625264,
+    exp: 1733711664
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:43:11'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 09:43:12'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 09:43:12'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 09:43:12'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 09:43:12'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 201,
+  data: {
+    data: {
+      name: 'ASI (Air Susu Ibu)',
+      notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+      nutrients: {
+        calcium: 340,
+        calories: 700,
+        carbohydrate: 70,
+        fat: 42,
+        proteins: 12
+      },
+      portion: 1000
+    },
+    status: 'success'
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:43:12'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:46:31'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:47:55'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:48:00'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:48:03'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:48:05'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:50:59'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:04'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:09'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:27'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:49'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:51:50'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:52:06'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:52:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:52:24'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/login',
+  params: {},
+  query: {},
+  body: {
+    email: 'Quentin.Buckridge14@gmail.com',
+    password: 'B9NpfOxtcwuE8WZ@'
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:52:46'
+}
+{
+  message: 'User logged in with email: Quentin.Buckridge14@gmail.com',
+  level: 'info',
+  timestamp: '08-12-2024 09:52:47'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/login' },
+  status: 200,
+  data: 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiYTM1ZWUyZWUtYmFjMy00M2E3LWJiOWQtNGI5MWI4YmExYjBlIiwiaWF0IjoxNzMzNjI2MzY3LCJleHAiOjE3MzM3MTI3Njd9.4zFfNC-KHShMS8hrUFWarW3KN9pH97cpovmfpfjyVZXJj5I6nh_NETR7NNl5vviBzwEvMNjRPHeSyLhhlCUt2Q',
+  level: 'info',
+  timestamp: '08-12-2024 09:52:47'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 201,
+  data: {
+    data: {
+      name: 'ASI (Air Susu Ibu)',
+      notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+      nutrients: {
+        calcium: 340,
+        calories: 700,
+        carbohydrate: 70,
+        fat: 42,
+        proteins: 12
+      },
+      portion: 1000
+    },
+    status: 'success'
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:53:14'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:11'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:14'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:37'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/nutritions',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '08-12-2024 09:55:39'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:39'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/api/v1/nutritions' },
+  status: 401,
+  level: 'info',
+  timestamp: '08-12-2024 09:55:39'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/nutritions',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '08-12-2024 09:55:58'
+}
+{
+  message: 'Authorization header missing or invalid format',
+  level: 'info',
+  timestamp: '08-12-2024 09:55:58'
+}
+{
+  message: 'Response has no data or errors',
+  request: { method: 'GET', url: '/api/v1/nutritions' },
+  status: 401,
+  level: 'info',
+  timestamp: '08-12-2024 09:55:58'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/nutritions',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '08-12-2024 09:56:19'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:56:19'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 09:56:20'
+}
+{
+  level: 'info',
+  message: 'Getting nutrition histories for user:',
+  timestamp: '08-12-2024 09:56:20'
+}
+{
+  message: 'Starting get histories food nutrition for user: a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'info',
+  timestamp: '08-12-2024 09:56:20'
+}
+{
+  message: 'Successfully retrieved nutrition histories for user: a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'info',
+  timestamp: '08-12-2024 09:56:20'
+}
+{
+  message: 'Response sent',
+  request: { method: 'GET', url: '/api/v1/nutritions' },
+  status: 200,
+  data: {
+    histories: [
+      {
+        id: 'c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:53:14.507Z',
+        nutrition_details: {
+          notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+          calciums: 340,
+          calories: 700,
+          carbohydrates: 70,
+          fats: 42,
+          proteins: 12
+        }
+      },
+      {
+        id: '4cec569e-bc05-4819-bb43-43a60e39ea1d',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:46:13.346Z',
+        nutrition_details: {
+          notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+          calciums: 340,
+          calories: 700,
+          carbohydrates: 70,
+          fats: 42,
+          proteins: 12
+        }
+      },
+      {
+        id: 'a6215489-df84-4b76-a00b-d8e49e7b0f41',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:43:12.529Z',
+        nutrition_details: null
+      },
+      {
+        id: '1611d8cd-6b57-43cc-8085-65571a6eb01f',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:42:08.864Z',
+        nutrition_details: null
+      },
+      {
+        id: '30f5dfb8-d1d4-48fc-a33b-124bae92d744',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:41:20.895Z',
+        nutrition_details: null
+      }
+    ],
+    total_nutrition: {
+      total_calories: 1400,
+      total_proteins: 24,
+      total_carbohydrates: 140,
+      total_fats: 84,
+      total_calciums: 680
+    }
+  },
+  level: 'info',
+  timestamp: '08-12-2024 09:56:20'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:57:39'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:57:41'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:58:06'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:58:40'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:03'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:08'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:17'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:27'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:47'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:52'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 09:59:57'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:00:09'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:00:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:00:21'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:00:24'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:08'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:11'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:12'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:14'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:15'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:27'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:01:36'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/nutritions',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '08-12-2024 10:02:41'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:02:41'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 10:02:41'
+}
+{
+  level: 'info',
+  message: 'Getting nutrition histories for user:',
+  timestamp: '08-12-2024 10:02:41'
+}
+{
+  message: 'Starting get histories food nutrition for user: a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'info',
+  timestamp: '08-12-2024 10:02:41'
+}
+{
+  message: 'Successfully retrieved nutrition histories for user: a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'info',
+  timestamp: '08-12-2024 10:02:42'
+}
+{
+  message: 'Response sent',
+  request: { method: 'GET', url: '/api/v1/nutritions' },
+  status: 200,
+  data: {
+    histories: [
+      {
+        id: 'c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:53:14.507Z',
+        nutrition_details: {
+          notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+          calciums: 340,
+          calories: 700,
+          carbohydrates: 70,
+          fats: 42,
+          proteins: 12
+        }
+      },
+      {
+        id: '4cec569e-bc05-4819-bb43-43a60e39ea1d',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:46:13.346Z',
+        nutrition_details: {
+          notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+          calciums: 340,
+          calories: 700,
+          carbohydrates: 70,
+          fats: 42,
+          proteins: 12
+        }
+      },
+      {
+        id: 'a6215489-df84-4b76-a00b-d8e49e7b0f41',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:43:12.529Z',
+        nutrition_details: null
+      },
+      {
+        id: '1611d8cd-6b57-43cc-8085-65571a6eb01f',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:42:08.864Z',
+        nutrition_details: null
+      },
+      {
+        id: '30f5dfb8-d1d4-48fc-a33b-124bae92d744',
+        food_name: 'ASI (Air Susu Ibu)',
+        date: '2024-11-27',
+        portion: 1000,
+        created_at: '2024-12-08T02:41:20.895Z',
+        nutrition_details: null
+      }
+    ],
+    total_nutrition: {
+      total_calories: 1400,
+      total_proteins: 24,
+      total_carbohydrates: 140,
+      total_fats: 84,
+      total_calciums: 680
+    }
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:02:42'
+}
+{
+  message: 'Request received',
+  method: 'GET',
+  url: '/api/v1/nutrition/c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+  params: {},
+  query: {},
+  body: {},
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'Validating request parameters',
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  level: 'info',
+  message: 'Getting nutrition detail for user:',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'Starting get detail nutrition for user: a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e, nutrition_id: c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'Successfully retrieved nutrition detail for id: c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'Response sent',
+  request: {
+    method: 'GET',
+    url: '/api/v1/nutrition/c68d2967-afb7-453f-9be8-b39d8a6f3e2d'
+  },
+  status: 200,
+  data: {
+    id: 'c68d2967-afb7-453f-9be8-b39d8a6f3e2d',
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000,
+    created_at: '2024-12-08T02:53:14.507Z',
+    updated_at: '2024-12-08T02:53:14.507Z',
+    nutrition_result: {
+      id: 'e50c6701-0a8c-426f-999d-dccfae5a5f14',
+      notes: 'ASI Eksklusif direkomendasikan oleh WHO sebagai sumber nutrisi eksklusif.',
+      calciums: 340,
+      calories: 700,
+      carbohydrates: 70,
+      fats: 42,
+      proteins: 12,
+      created_at: '2024-12-08T02:53:14.584Z',
+      updated_at: '2024-12-08T02:53:14.584Z'
+    }
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:03:13'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:03:46'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:04:51'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:04:52'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:04:54'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:04:59'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:12'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:05:14'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:05:14'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:15'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:15'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:15'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:15'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 201,
+  data: {
+    id: '48cc5656-c0c9-42db-814a-fcee0389ae1e',
+    user_id: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000,
+    created_at: '2024-12-08T03:05:15.317Z',
+    updated_at: '2024-12-08T03:05:15.317Z'
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:05:15'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:42'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:05:46'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:04'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:07'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:09'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:11'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:14'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:19'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:22'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:25'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:32'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:34'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:42'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:46'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:50'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:06:57'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:00'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:03'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:06'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:07'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:10'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:17'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:27'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:07:28'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:07:28'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:29'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:29'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:29'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:29'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findUnique()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindUnique\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "902a71c5-4f83-4161-8065-741ffa47706a"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findUnique()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindUnique\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "902a71c5-4f83-4161-8065-741ffa47706a"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 10:07:29',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 500,
+  errors: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findUnique()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindUnique\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "902a71c5-4f83-4161-8065-741ffa47706a"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:29'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:40'
+}
+{
+  message: 'Request received',
+  method: 'POST',
+  url: '/api/v1/nutrition',
+  params: {},
+  query: {},
+  body: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:07:41'
+}
+{
+  message: {
+    uuid: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+    iat: 1733626367,
+    exp: 1733712767
+  },
+  level: 'info',
+  timestamp: '08-12-2024 10:07:41'
+}
+{
+  message: 'User a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e authenticated successfully',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:42'
+}
+{
+  message: 'start service and searching user',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:42'
+}
+{
+  message: 'start api food nutrition',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:42'
+}
+{
+  message: 'start upload to db',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:42'
+}
+{
+  name: 'PrismaClientValidationError',
+  message: '\n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findFirst()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindFirst\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "2d9014b2-26c4-4345-b4fc-ef4d528ee2d9"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.',
+  stack: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findFirst()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindFirst\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "2d9014b2-26c4-4345-b4fc-ef4d528ee2d9"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  path: '/api/v1/nutrition',
+  method: 'POST',
+  timestamp: '08-12-2024 10:07:42',
+  requestBody: {
+    food_name: 'ASI (Air Susu Ibu)',
+    date: '2024-11-27',
+    portion: 1000
+  },
+  requestParams: {},
+  requestQuery: {},
+  userId: 'a35ee2ee-bac3-43a7-bb9d-4b91b8ba1b0e',
+  level: 'error'
+}
+{
+  message: 'Response sent',
+  request: { method: 'POST', url: '/api/v1/nutrition' },
+  status: 500,
+  errors: 'PrismaClientValidationError: \n' +
+    '\x1B[31mInvalid \x1B[1m`prisma.nutrition.findFirst()`\x1B[22m invocation in\x1B[39m\n' +
+    '\x1B[4mC:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:43\x1B[24m\n' +
+    '\n' +
+    '  \x1B[2m\x1B[90m303\x1B[39m     \x1B[34m}\x1B[39m\x1B[34m)\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m304\x1B[39m \x1B[34m}\x1B[39m\x1B[22m\n' +
+    '  \x1B[2m\x1B[90m305\x1B[39m \x1B[22m\n' +
+    '\x1B[1m\x1B[31m→\x1B[39m\x1B[22m \x1B[2m\x1B[90m306\x1B[39m \x1B[36mconst\x1B[39m result = \x1B[36mawait\x1B[39m prisma\x1B[34m.\x1B[39mnutrition\x1B[34m.\x1B[39m\x1B[36mfindFirst\x1B[39m\x1B[34m(\x1B[39m\x1B[22m{\n' +
+    '        where: {\n' +
+    '          id: "2d9014b2-26c4-4345-b4fc-ef4d528ee2d9"\n' +
+    '        },\n' +
+    '        include: {\n' +
+    '          \x1B[31mnutrition_Result\x1B[39m: true,\n' +
+    '          \x1B[31m~~~~~~~~~~~~~~~~\x1B[39m\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mUser\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m,\n' +
+    '      \x1B[32m?\x1B[39m   \x1B[32mNutrition_Result\x1B[39m\x1B[32m?\x1B[39m\x1B[32m: \x1B[39m\x1B[32mtrue\x1B[39m\n' +
+    '        }\n' +
+    '      }\x1B[2m)\x1B[22m\n' +
+    '\n' +
+    'Unknown field \x1B[31m`nutrition_Result`\x1B[39m for \x1B[1minclude\x1B[22m statement on model \x1B[1m`Nutrition`\x1B[22m. Available options are listed in \x1B[32mgreen\x1B[39m.\n' +
+    '    at wn (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:29:1363)\n' +
+    '    at $n.handleRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6958)\n' +
+    '    at $n.handleAndLogRequestError (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6623)\n' +
+    '    at $n.request (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:121:6307)\n' +
+    '    at async l (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\node_modules\\@prisma\\client\\runtime\\library.js:130:9633)\n' +
+    '    at async Object.food_nutritions (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\services\\measure.service.js:306:20)\n' +
+    '    at async food_nutrion (C:\\Users\\USER\\Documents\\NGODING\\CAPSTONE\\stunby-capstone-bangkit\\src\\controllers\\measure.controller.js:83:24)',
+  level: 'info',
+  timestamp: '08-12-2024 10:07:42'
+}
+{
+  message: 'Server is running on port 8080',
+  level: 'info',
+  timestamp: '08-12-2024 10:08:38'
+}
