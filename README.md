@@ -91,9 +91,8 @@ The backend will be running on `http://localhost:3000` by default.
 
 Comprehensive API documentation is available in the `docs` folder. Refer to `docs/api-docs.md` for detailed usage instructions, including:
 
-- Authentication endpoints
-- Data management endpoints
-- Cloud storage APIs
+- [API Documentation](docs/api-cc.md) 
+- [ML Model Documentation](docs/api-ml.md) 
 
 ---
 
