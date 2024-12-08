@@ -13,18 +13,25 @@ module.exports = {
             .pattern(/^\d{4}-\d{2}-\d{2}$/)
             .message("Date must follow the format YYYY-MM-DD")
             .optional(),
+        range: Joi.number()
+            .valid(0, 1, 2)
+            .messages({
+                'number.base': 'Range harus berupa angka',
+                'any.only': 'Range harus 0 (0-6 bulan), 1 (0-12 bulan), atau 2 (0-24 bulan)'
+            })
+            .optional()
     }),
 
     nutrition_schema: Joi.object({
         food_name: Joi.string().required(),
         date: Joi.string().pattern(/^\d{4}-\d{2}-\d{2}$/).required(),
-        portion : Joi.number().required()
+        portion: Joi.number().required()
     }),
 
-    detail_schema : Joi.object({
-        measure_id : Joi.string().required()
+    detail_schema: Joi.object({
+        measure_id: Joi.string().required()
     }),
-    detail_nutrition_schema : Joi.object({
+    detail_nutrition_schema: Joi.object({
         nutrition_id: Joi.string().required()
     })
 

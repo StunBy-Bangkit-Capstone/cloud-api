@@ -173,18 +173,47 @@ async function getMeasurements(userId, data) {
         throw new ResponseError(404, "User atau tanggal lahir tidak ditemukan");
     }
 
-    const dateFilter = data.date
-        ? {
-            date_measure: {
-                gte: user.birth_day,
-                lte: data.date,
-            },
+    // const dateFilter = data.date
+    //     ? {
+    //         date_measure: {
+    //             gte: user.birth_day,
+    //             lte: data.date,
+    //         },
+    //     }
+    //     : {
+    //         date_measure: {
+    //             gte: user.birth_day,
+    //         },
+    //     };
+
+    let rangeEndDate;
+    if (data.range !== undefined) {
+        switch (data.range) {
+            case 0:
+                rangeEndDate = dayjs(user.birth_day).add(6, 'month').format('YYYY-MM-DD');
+                break;
+            case 1:
+                rangeEndDate = dayjs(user.birth_day).add(12, 'month').format('YYYY-MM-DD');
+                break;
+            case 2:
+                rangeEndDate = dayjs(user.birth_day).add(24, 'month').format('YYYY-MM-DD');
+                break;
+            default:
+                rangeEndDate = data.date || dayjs().format('YYYY-MM-DD');
         }
-        : {
-            date_measure: {
-                gte: user.birth_day,
-            },
-        };
+    } else {
+        rangeEndDate = data.date || dayjs().format('YYYY-MM-DD');
+    }
+
+    const dateFilter = {
+        date_measure: {
+            gte: user.birth_day,
+            lte: rangeEndDate,
+        },
+    };
+
+    logger.info(`Fetching measurements with date range: ${user.birth_day} to ${rangeEndDate}`);
+
 
     // Query measurement dengan filter yang sesuai
     const measurements = await prisma.measurement.findMany({
@@ -238,11 +267,6 @@ async function getDetailMeasurement(data) {
     return measure_data
 
 }
-
-// TODO : register tambahan weight samo length 
-// TODO : ketika register kan udah ada weiht sama length tu bikinin function buat api ini nutrition
-
-
 
 async function food_nutritions(user_id, data) {
     try {
@@ -328,6 +352,8 @@ async function food_nutritions(user_id, data) {
         throw error;
     }
 }
+
+
 async function histories_food_nutrition(user_id) {
     try {
         logger.info(`Starting get histories food nutrition for user: ${user_id}`);
