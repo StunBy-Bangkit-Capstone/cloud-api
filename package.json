@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "seed": "node ./prisma/seeder.js"
+    "seed": "node ./prisma/seeder.js",
+    "seed-article": "node ./prisma/seed-articles.js"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
